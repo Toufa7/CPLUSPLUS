@@ -10,62 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iomanip>
-#include <iostream>
-
-class Contact
-{
-    private:
-        std::string  FirstName;
-        std::string  LastName;
-        std::string  Nickname;
-        std::string  PhoneNumber;
-        std::string  DarkestSecret;
-    public:
-    // All of this membre functions are called getter they return pointer to the memory address of privates membre variables
-        std::string *GetFirst_name()
-        {
-            return (&this->FirstName);
-        }
-        std::string *GetLastName()
-        {
-            return (&this->LastName);
-        }
-        std::string *GetNickname()
-        {
-            return (&this->Nickname);
-        }
-        std::string *GetPhoneNumber()
-        {
-            return (&this->PhoneNumber);
-        }
-        std::string *GetDarkestSecret()
-        {
-            return (&this->DarkestSecret);
-        }
-};
-
-class PhoneBook
-{
-    // By initializing these variables to 0, the PhoneBook class is ready to start tracking contacts as soon as it is created.
-    private:
-        Contact nokia[8];
-        // a variable which keeps track of the number of contacts stored in the 'nokia' array
-        int     idx;
-        // a variable that indicates which contact is currently selected
-        int     current_contact;
-    public:
-        PhoneBook()
-        {
-            idx = 0;
-            current_contact = 0;
-        };
-        void    AddContact();
-        void    SearchContact();
-        void    ContactInformations();
-        void    DisplayContact(int idx);
-        void    Exiting();
-};
+#include "./Contact.hpp"
+#include "./PhoneBook.hpp"
 
 int skip_whitespaces(std::string    str)
 {
@@ -79,90 +25,117 @@ int skip_whitespaces(std::string    str)
     return (0);
 }
 
+int    is_number(std::string choice)
+{
+    if (choice.length() == 1 && choice[0] >= '0' && choice[0] <= '8')
+        return (choice[0] - 48);
+    else
+        return (-1);
+}
+
+
+/* **************************************************************************
+    looping over the object array and calls the membre function of that class
+        to get their values and display them as a table                                                            
+************************************************************************** */
+
 void    PhoneBook::ContactInformations()
 {
-    // looping over the object array and calls the membre function of that class to get 
-    // their values and display them as a table
+    // 
     std::cout << " ─────────────────────────────────────────── \n";
     std::cout << "|       Idx|" <<  " FirstName|" << "  LastName|" << "  Nickname|\n";
     std::cout << "+──────────+──────────+──────────+──────────+\n";
-    for (int i = 0; i < this->idx ; i++)
+    for (int i = 0; i < idx ; i++)
     {
         std::cout <<    "|" << std::setw(10)    <<  i;
-        if (this->nokia[i].GetFirst_name()->length() > 10)
+
+        if (nokia[i].GetFirst_name().length() > 10)
         {
-            std::cout <<    "|" <<  this->nokia[i].GetFirst_name()->substr(0, 9);
+            std::cout <<    "|" <<  nokia[i].GetFirst_name().substr(0, 9);
             std::cout << ".";
         }
         else
-            std::cout <<    "|" << std::setw(10)    <<  *this->nokia[i].GetFirst_name();
-        if (this->nokia[i].GetLastName()->length() > 10)
+            std::cout <<    "|" << std::setw(10)    <<  nokia[i].GetFirst_name();
+        if (nokia[i].GetLastName().length() > 10)
         {
-            std::cout <<    "|" <<  this->nokia[i].GetLastName()->substr(0, 9);
+            std::cout <<    "|" <<  nokia[i].GetLastName().substr(0, 9);
             std::cout << ".";
         }
         else
-            std::cout <<    "|" << std::setw(10)    <<  *this->nokia[i].GetLastName();
-        if (this->nokia[i].GetNickname()->length() > 10)
+            std::cout <<    "|" << std::setw(10)    <<  nokia[i].GetLastName();
+        if (nokia[i].GetNickname().length() > 10)
         {
-            std::cout <<    "|" <<  this->nokia[i].GetNickname()->substr(0, 9);
+            std::cout <<    "|" <<  nokia[i].GetNickname().substr(0, 9);
             std::cout << ".";
         }
         else
-            std::cout <<    "|" << std::setw(10)    <<  *this->nokia[i].GetNickname();
+            std::cout <<    "|" << std::setw(10)    <<  nokia[i].GetNickname();
         std::cout << "|\n+───────────────────────────────────────────+\n";
     }
 }
 
 void    PhoneBook::DisplayContact(int idx)
 {
-    std::cout << "1) First Name : " << *this->nokia[idx].GetFirst_name() << std::endl;
-    std::cout << "2) Last Name : " <<  *this->nokia[idx].GetLastName() << std::endl;
-    std::cout << "3) Nickname : " << *this->nokia[idx].GetNickname() << std::endl;
-    std::cout << "4) Phone Number : " << *this->nokia[idx].GetPhoneNumber() << std::endl;
-    std::cout << "5) Darkest Secret : " << *this->nokia[idx].GetDarkestSecret() << std::endl;
+    std::cout << "1) First Name : " << nokia[idx].GetFirst_name() << std::endl;
+    std::cout << "2) Last Name : " <<  nokia[idx].GetLastName() << std::endl;
+    std::cout << "3) Nickname : " << nokia[idx].GetNickname() << std::endl;
+    std::cout << "4) Phone Number : " << nokia[idx].GetPhoneNumber() << std::endl;
+    std::cout << "5) Darkest Secret : " << nokia[idx].GetDarkestSecret() << std::endl;
 }
+
+// this loop checks if the input just a whitespace it will show a msg and get the input again (Until a valid input)
+// (skip_whitespaces) a helper function takes a string and checks if it contains whitespace else it return 1 so it's valid
 
 void    PhoneBook::AddContact()
 {
+    std::string fname;
     std::cout << "1) First Name : ";
-    std::getline(std::cin, *this->nokia[this->current_contact].GetFirst_name());
-    // this loop checks if the input just a whitespace it will show a msg and get the input again (Until a valid input)
-    // (skip_whitespaces) a helper function takes a string and checks if it contains whitespace else it return 1 so it's valid
-    while (!skip_whitespaces(*this->nokia[this->current_contact].GetFirst_name()))
+    std::getline(std::cin, fname);
+    nokia[this->current_contact].SetFirst_name(fname);
+    while (!skip_whitespaces(fname))
     {
         std::cout << "Empty field !\n";
-        std::getline(std::cin, *this->nokia[this->current_contact].GetFirst_name());
+        std::getline(std::cin, fname);
     }
+
+    std::string lname;
     std::cout << "2) Last Name : ";
-    std::getline(std::cin, *this->nokia[this->current_contact].GetLastName());
-    while (!skip_whitespaces(*this->nokia[this->current_contact].GetLastName()))
-        std::getline(std::cin, *this->nokia[this->current_contact].GetLastName());
+    std::getline(std::cin, lname);
+    nokia[this->current_contact].SetLastName(fname);
+    while (!skip_whitespaces(lname))
+        std::getline(std::cin, lname);
+    
+
+    std::string nname;
     std::cout << "3) Nickname : ";
-    std::getline(std::cin, *this->nokia[this->current_contact].GetNickname()); 
-    while (!skip_whitespaces(*this->nokia[this->current_contact].GetNickname()))
-        std::getline(std::cin, *this->nokia[this->current_contact].GetNickname());
+    std::getline(std::cin, nname);
+    nokia[this->current_contact].SetNickname(nname);
+    while (!skip_whitespaces(nname))
+        std::getline(std::cin, nname);
+
+    
+    std::string pnbr;
     std::cout << "4) Phone Number : ";
-    std::getline(std::cin, *this->nokia[this->current_contact].GetPhoneNumber()); 
-    while (!skip_whitespaces(*this->nokia[this->current_contact].GetPhoneNumber()))
-        std::getline(std::cin, *this->nokia[this->current_contact].GetPhoneNumber());
+    nokia[this->current_contact].SetPhoneNumber(pnbr);
+    std::getline(std::cin, pnbr); 
+    while (!skip_whitespaces(pnbr))
+        std::getline(std::cin, pnbr);
+
+    
+    std::string dsecret;
     std::cout << "5) Darkest Secret : ";
-    std::getline(std::cin,  *this->nokia[this->current_contact].GetDarkestSecret());
-    while (!skip_whitespaces(*this->nokia[this->current_contact].GetDarkestSecret()))
-        std::getline(std::cin, *this->nokia[this->current_contact].GetDarkestSecret());
+    nokia[this->current_contact].SetDarkestSecret(dsecret);
+    std::getline(std::cin,  dsecret);
+    while (!skip_whitespaces(dsecret))
+        std::getline(std::cin, dsecret);
+    
+
     current_contact = (current_contact + 1) % 8;
-    std::cout << "      Contact has been successfully created \n";
+    std::cout << "      Contact been successfully created \n";
     if (idx < 8)
         idx++;
 }
 
-int    is_number(std::string choice)
-{
-    if (choice.length() == 1 && choice[0] >= '0' && choice[0] <= '9')
-        return (choice[0] - 48);
-    else
-        return (-1);
-}
 
 void    PhoneBook::SearchContact()
 {
@@ -180,7 +153,7 @@ void    PhoneBook::SearchContact()
 
     std::getline(std::cin,choice);
     nbr = is_number(choice);
-    if (nbr >= 0 && nbr <= this->idx)
+    if (nbr >= 0 && nbr < this->idx)
     {
         DisplayContact(nbr);
     }
@@ -193,6 +166,9 @@ int main()
     PhoneBook   phone;
     std::string choice;
     
+    std::string name;
+    std::string *str;
+
     std::cout << "              Welcome to your awesome phonebook\n";
     std::cout << "Usage\n";
     std::cout << "      ADD\n";

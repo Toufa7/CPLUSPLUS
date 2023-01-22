@@ -14,11 +14,6 @@
 #include <string>
 #include <string.h>
 
-// toupper it converts a given character to uppercase
-// Out of range (overflow) an int maybe excced the max or min value of
-// Typecast 
-// explicit cast keyword in this case is "char" in ordre to convert to any other data types
-
 int main(int ac, char **av)
 {
     if (ac == 1)

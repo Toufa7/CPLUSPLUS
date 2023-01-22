@@ -19,12 +19,13 @@ CPP_FLAGS = -Wall -Wextra -Werror
 
 CPP_VERSION = -std=c++98
 
-FILES = main.cpp \
+FILES =	Contact.cpp \
+		PhoneBook.cpp \
 
 all	: $(NAME)
 
 $(NAME) : $(FILES)
-		$(CPP) $(CPP_FLAGS) $(CPP_VERSION) $(FILES) -o $(NAME)
+		$(CPP) $(CPP_FLAGS) $(CPP_VERSION) $(FILES) main.cpp -o $(NAME)
 
 RM = rm -rf
 
