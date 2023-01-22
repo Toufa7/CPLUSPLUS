@@ -20,24 +20,23 @@
 class Contact
 {
     private:
-        std::string  FirstName;
-        std::string  LastName;
-        std::string  Nickname;
-        std::string  PhoneNumber;
-        std::string  DarkestSecret;
+        std::string FirstName;
+        std::string LastName;
+        std::string Nickname;
+        std::string PhoneNumber;
+        std::string DarkestSecret;
     public:
-    // All of this membre functions are called getter they return pointer to the memory address of privates membre variables
         std::string GetFirst_name();
         std::string GetLastName();
         std::string GetNickname();
         std::string GetPhoneNumber();
         std::string GetDarkestSecret();
-        void SetFirst_name(std::string FirstName);
-        void SetLastName(std::string LastName);
-        void SetNickname(std::string Nickname);
-        void SetPhoneNumber(std::string PhoneNumber);
-        void SetDarkestSecret(std::string DarkestSecret);
-};
+        void        SetFirst_name(std::string FirstName);
+        void        SetLastName(std::string LastName);
+        void        SetNickname(std::string Nickname);
+        void        SetPhoneNumber(std::string PhoneNumber);
+        void        SetDarkestSecret(std::string DarkestSecret);
+};      
 
 
 #endif

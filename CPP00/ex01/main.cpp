@@ -25,14 +25,13 @@ int skip_whitespaces(std::string    str)
     return (0);
 }
 
-int    is_number(std::string choice)
+int is_number(std::string choice)
 {
-    if (choice.length() == 1 && choice[0] >= '0' && choice[0] <= '8')
+    if (choice.length() == 1 && choice[0] >= '0' && choice[0] <= '7')
         return (choice[0] - 48);
     else
         return (-1);
 }
-
 
 /* **************************************************************************
     looping over the object array and calls the membre function of that class
@@ -41,7 +40,6 @@ int    is_number(std::string choice)
 
 void    PhoneBook::ContactInformations()
 {
-    // 
     std::cout << " ─────────────────────────────────────────── \n";
     std::cout << "|       Idx|" <<  " FirstName|" << "  LastName|" << "  Nickname|\n";
     std::cout << "+──────────+──────────+──────────+──────────+\n";
@@ -70,7 +68,7 @@ void    PhoneBook::ContactInformations()
         }
         else
             std::cout <<    "|" << std::setw(10)    <<  nokia[i].GetNickname();
-        std::cout << "|\n+───────────────────────────────────────────+\n";
+        std::cout << "|\n ─────────────────────────────────────────── \n";
     }
 }
 
@@ -83,8 +81,10 @@ void    PhoneBook::DisplayContact(int idx)
     std::cout << "5) Darkest Secret : " << nokia[idx].GetDarkestSecret() << std::endl;
 }
 
-// this loop checks if the input just a whitespace it will show a msg and get the input again (Until a valid input)
-// (skip_whitespaces) a helper function takes a string and checks if it contains whitespace else it return 1 so it's valid
+/* **************************************************************************
+    this loop checks if the input just a whitespace it will show a
+        msg and get the input again (Until a valid input)
+************************************************************************** */
 
 void    PhoneBook::AddContact()
 {
@@ -161,19 +161,21 @@ void    PhoneBook::SearchContact()
         std::cout << "Out of the boundry !"  << std::endl;
 }
 
-int main()
+void    description()
 {
-    PhoneBook   phone;
-    std::string choice;
-    
-    std::string name;
-    std::string *str;
-
     std::cout << "              Welcome to your awesome phonebook\n";
     std::cout << "Usage\n";
     std::cout << "      ADD\n";
     std::cout << "      SEARCH\n";
     std::cout << "      EXIT\n";
+}    
+
+int main()
+{
+    PhoneBook   phone;
+    std::string choice;
+
+    description();
     while (std::getline(std::cin, choice))
     {
         if (choice == "ADD")
@@ -189,7 +191,7 @@ int main()
         }
         std::cout << "      ADD\n";
         std::cout << "      SEARCH\n";
-        std::cout << "      Exit\n";
+        std::cout << "      EXIT\n";
     }
     return (0);
 }
