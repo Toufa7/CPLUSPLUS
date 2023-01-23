@@ -1,17 +1,15 @@
-NAME = weapons
+NAME = Harl_2.0
 
 CPP = c++
 
 CPP_FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILES = Weapon.cpp \
-		HumanA.cpp \
-		HumanB.cpp \
+FILES = Harl.cpp \
 
 all : $(NAME)
 
 $(NAME) : $(FILES)
-		$(CPP) $(CPP_FLAGS) $(FILES) main.cpp -o $(NAME)
+		$(CPP) $(CPP_FLAGS) $(FILES) -o $(NAME)
 
 RM = rm -rf
 

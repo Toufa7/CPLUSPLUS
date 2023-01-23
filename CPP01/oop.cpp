@@ -9,7 +9,7 @@ class Car
         struct year
         {
             int a;
-        } obj;
+        }   obj;
         string  model;
     public:
         string getmodel()
@@ -18,7 +18,8 @@ class Car
         }
         void    setmodel(string mode)
         {
-            this->model = mode;
+            Car *e = this;
+            e->model = mode;
         }
         int getyear()
         {

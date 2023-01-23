@@ -29,6 +29,29 @@
 //     Pointers me;
 // }
 
+
+
+// using namespace std;
+
+// Passing by refrence means
+// That any changes made to the variable within the function will be reflected in the variable's value outside of the function
+// Out of the scope
+
+// void    adding(int &a)
+// {
+//     a *= a;
+// }
+
+// int main()
+// {
+//     int a = 10;
+
+//     adding(a);
+
+//     cout << a;
+// }
+
+
 #include <iostream>
 #include <string>
 
@@ -68,11 +91,16 @@ int main()
 
     cout << "Ptr Obj2 " << ptr->get() << endl;
 
+    // You cannot do math on refrences ?
+    // <
+    //     Hello &ref = obj1 + 10;
+    // >
+
     Hello &ref = obj1;
 
     cout << "Ref Obj1 " << ref.get() << endl;
 
-    &ref = obj2;
+    ref = obj2;
 
     cout << "Ref Obj1 " << ref.get() << endl;
 }
