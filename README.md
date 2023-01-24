@@ -19,3 +19,5 @@ Once a namespace is defined, its elements can be accessed using the scope resolu
 <p align="center">
 <img src="imgs/namespace.png" width="1000"/>
 </p>
+
+:information_source: 
