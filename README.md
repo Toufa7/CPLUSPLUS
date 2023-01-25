@@ -11,7 +11,7 @@
   
 Once a namespace is defined, its elements can be accessed using the scope resolution operator (::)
 
-  ## Benifits :
+  ## Benefits :
 
   Namespaces provide a way to organize code, prevent naming conflicts, and improve code reuse, readability, and maintainability.
 
