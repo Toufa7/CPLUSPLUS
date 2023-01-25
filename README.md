@@ -1,7 +1,13 @@
-Hi 👋 and welcome to my GitHub repository!
+<p align="center">
+           Hi 👋 and welcome to my GitHub repository!
+<p align="center">
 I am excited to share my journey of learning C++ with you.
+<p align="center">
 I hope you will find the information and resources in this repository helpful.
+<p align="center">
 Thank you for taking the time to check it out!
+
+</p>
 
 # Table of Contents  
   * [OOP](#oop)
