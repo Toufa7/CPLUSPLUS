@@ -103,6 +103,10 @@ Once a namespace is defined, its elements can be accessed using the scope resolu
     <img src="imgs/namespace.png" width="1000"/>
   </p>
 
+> The use of namespace can be convenient in small programs :
+> - It allows you to access elements in the namespaces without mention the namespace
+> - But it's a BAD PRACTICE in large codebases in a code that will be shared with others (حيتاش داكشي يقد يدير الله يحفظ :sweat_smile:  شي Conflicts)
+
 # Operator Overloading
 
   ## Definition :  
@@ -156,3 +160,55 @@ So the compiler needs to handle that operator based on whether it has been overl
    <p align="center">
     <img = src="imgs/overloading.png" width="1000"/>
    </p>
+
+
+# Memory Allocation (Pointers & References)
+
+  ## Pointers :
+  
+  - As we know a pointer stores the address of another variable 
+  
+  - When we use a pointer to class in fact we're storing the memory address of an object of that class
+  
+  - We can change which object the pointer is pointing to during the execution of the program
+  
+  (شوف غي شي متال ديال شي بروغرام لي كايخليك تختار شنو بغيتي عن طريق input , يعني على حساب داكشي لي ختاريتي ل pointer غادي pointy عليه يعني كايقد يتبدل)
+  
+  - A pointer can be NULL
+  
+  ## References :
+  
+  - Is a way to give another name to a variable (بحال شي اختصار اولا شي سمية أخرى ليه)  
+  
+  - When we use a reference to class, we're creating an alias for an existing object (هادشي كايخلينا نوصلو نيشان ليه بلا "*" )
+
+  - A reference must always be initialized when it is created and it can't be changed to reference another variable after it's been initialized
+   
+  - A reference can't be NULL 
+  
+  حيتاش كيف ماقلنا مع كان كانستخدموه خاص يpointer على شي حاجة (صحيح استعملت كلمة لكن مالقيت مانكتب :sweat_smile:	)
+  
+  
+  > Overall, references and pointers are two ways to access the memory location of a variable in C++, with references being a more convenient and safer way to do so.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
