@@ -55,6 +55,9 @@ In summary, C++ was developed as an extension of C to provide additional feature
 
 # OOP
 
+Object-oriented programming (OOP) is a programming paradigm that is based on the concept of "objects" which have properties and methods (Objects are instances of classes), OOP is designed to provide a way to structure and organize code in a way that is easy to understand and maintain 
+
+
 ## What's a Class
 
 A class in C++ is a blueprint (بلان) for creating objects (a particular data structure) :
