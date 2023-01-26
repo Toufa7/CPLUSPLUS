@@ -11,15 +11,23 @@ Thank you for taking the time to check it out!
 
 # Table of Contents  
   * [OOP](#oop)
-    * [Example](#example)
+    * [Why do we need OOP ?](#why-do-we-need-oop)
+    * [What's a Class](#whats-a-class)
   * [Namespace](#namespace)
+    * [Definition](#definition)
+    * [Benefits](#benefits)
     * [Example](#example)
   * [Operator Overloading](#operator-overloading)  
+    * [Definition](#definition)
+    * [Advantages and Disadvantages](#advantages-and-disadvantages)
     * [Example](#example)
+  * [Memory Allocation](#memory-allocation)  
+    * [Pointers](#pointers)
+    * [References](#references)
 
 # OOP
 
-## Let's start by defining what's a Class ????
+## What's a Class
 
 A class in C++ is a blueprint (بلان) for creating objects (a particular data structure) :
 
@@ -37,7 +45,7 @@ A class in C++ is a blueprint (بلان) for creating objects (a particular data
 
   Additionally, classes can be reused to create new objects without having to redefine their properties and behavior each time.
 
-## Why do we need OOP ?
+## Why do we need OOP
 
   - Encapsulation : OOP allows member functions and variables to operate into single unit called Class (This allows the developer )
   
@@ -88,7 +96,7 @@ Then the class "Parrot" have a new method called "speak()" and variable member "
  
 # Namespace
 
-  ## Definition :
+  ## Definition
   
   Namespaces are defined using the keyword namespace, and can contain :
   
@@ -99,7 +107,7 @@ Then the class "Parrot" have a new method called "speak()" and variable member "
   
 Once a namespace is defined, its elements can be accessed using the scope resolution operator (::)
 
-  ## Benefits :
+  ## Benefits
 
   Namespaces provide a way to organize code, prevent naming conflicts, and improve code reuse, readability, and maintainability.
 
@@ -115,7 +123,7 @@ Once a namespace is defined, its elements can be accessed using the scope resolu
 
 # Operator Overloading
 
-  ## Definition :  
+  ## Definition  
   
   Operator (a symbol to perform mathematical and logical computations) overloading is a feature in C++ that allows you to redefine the way operators such as +, -, *, etc, work for user-defined data types such as classes and structs ()
  By making theses operator to work on used defined data types such as class, structs 
@@ -135,7 +143,7 @@ So the compiler needs to handle that operator based on whether it has been overl
   
   ℹ️ : Good Practice: Remembre to passed the arguments as const refrence to ensure that the membre function cannot modify the object being passed
   
-  ## Advantages and Disadvantages :
+  ## Advantages and Disadvantages
 
   ### Advantages :
  
@@ -168,9 +176,9 @@ So the compiler needs to handle that operator based on whether it has been overl
    </p>
 
 
-# Memory Allocation (Pointers & References)
+# Memory Allocation
 
-  ## Pointers :
+  ## Pointers
   
   - As we know a pointer stores the address of another variable 
   
@@ -182,7 +190,7 @@ So the compiler needs to handle that operator based on whether it has been overl
   
   - A pointer can be NULL
   
-  ## References :
+  ## References
   
   - Is a way to give another name to a variable (بحال شي اختصار اولا شي سمية أخرى ليه)  
   
