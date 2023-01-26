@@ -200,24 +200,29 @@ So the compiler needs to handle that operator based on whether it has been overl
    >> - A Pointer has the freedom to move around and point to different variables
    >> - Whereas the reference gets assigned one time, and it just becomes a reference to that location in memory
   ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
 
-فاش كانديكلاريو شي variable الOS كايAllocy لينا Memory للداك الVariable باستعمال Virtual Memory باش نقدوا نخدموا البروغرام , من بعد كايشد MMU داك الMemory و كايدير اش كانسميوا Mapping Or Paging لPhysical Memory Address ف(RAM أولا Hard Disk) هاد  Physical Address هي الActual Location تاع Memory , ادن فاش تبغي تمشي للداك الVariable الCPU كايدير واحد الRequest من Virtual Address تاع الVariable كايجي سي MMU كايترجم ديك الVirtual Address للPhysical Address ()RAM الRAM كايخد ديك الValue لي مخبع تما و كايردها للCPU . يعني بخلاصة فاش كانبغيو شي Variable كنا قبل خدمناه الMMU كايدير بحال واحد الLien نيشان مع الPhysical Memory من تم الCPU كايAccessy نيشان للVariable و يبدلوا كيف ما بغى
+When a function uses a reference, it can directly access the variable without an additional memory fetch.
+
+A pointer, however, must use the indirection operator (*) to access the value of the variable, which requires an additional memory fetch.
+
+
+A memory fetch refers to the process of retrieving data from memory.
+
+When a program requests data from memory, the CPU sends a memory request to the memory management unit (MMU), which then retrieves the requested data from the physical memory and sends it back to the CPU. This process is called a memory fetch.
+
+For example, when a program wants to access the value of a variable, it sends a memory request to the MMU with the address of the variable, the MMU then retrieves the value stored at that address and sends it back to the CPU. This whole process is called a **Memory Fetch**.
+
+In short, a memory fetch is the process of retrieving data from memory, it's the act of fetching a value from the memory by providing the address of the variable.
+
+  <p>
+    <img src="imgs/memory.png" width="1000">
+  </p>
+
+فاش كانديكلاريو شي variable الOS كايAllocy لينا Memory للداك الVariable باستعمال Virtual Memory باش نقدوا نخدموا البروغرام , من بعد كايشد MMU داك الMemory و كايدير اش كانسميوا Mapping Or Paging لPhysical Memory Address ف(RAM أولا Hard Disk) هاد  Physical Address هي الActual Location تاع Memory , ادن فاش تبغي تمشي للداك الVariable الCPU كايدير واحد الRequest من Virtual Address تاع الVariable كايجي سي MMU كايترجم ديك الVirtual Address للPhysical Address ()RAM الRAM كايخد ديك الValue لي مخبع تما و كايردها للCPU .
+
+يعني بخلاصة فاش كانبغيو شي Variable كنا قبل خدمناه الMMU كايدير بحال واحد الLien نيشان مع الPhysical Memory من تم الCPU كايAccessy نيشان للVariable و يبدلوا كيف ما بغى
   
   
   
   
-  
-  
+ 
