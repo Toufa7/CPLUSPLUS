@@ -196,7 +196,9 @@ So the compiler needs to handle that operator based on whether it has been overl
   
   
   > Overall, references and pointers are two ways to access the memory location of a variable in C++, with references being a more convenient and safer way to do so.
-  
+  > Basically the main difference between a reference and a pointer
+   >> - A Pointer has the freedom to move around and point to different variables
+   >> - Whereas the reference gets assigned one time, and it just becomes a reference to that location in memory
   ***
   ***
   ***
@@ -211,100 +213,8 @@ So the compiler needs to handle that operator based on whether it has been overl
   ***
   ***
   ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  ***
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  When a program accesses a variable, the computer's memory management unit (MMU) is responsible for mapping the memory address of the variable to a physical memory location. This process is called a memory fetch.
 
-When a function uses a reference to access a variable, the reference is already bound to the memory address of the variable, which means that the function can directly access the variable without the need for an additional memory fetch.
-
-However, when a function uses a pointer to access a variable, the function must first use the indirection operator (*) to access the value of the variable that the pointer is pointing to. This requires an additional memory fetch, because the computer must first look up the memory address stored in the pointer, and then access the value stored at that address.
-
-In other words, using a reference eliminates the need for an additional memory fetch, because the function can directly access the variable without the need for an additional lookup of the memory address.
-
-This may not have a big impact on the overall performance of your program, but it can make a difference in some cases where the program needs to access the variable frequently, or in cases where the program is running on a resource-constrained system.
-  
-  
-  
-  
-  
-  
-  Example :
-  
-  
-  Let's say we have a program that declares an integer variable called "x" and assigns it the value of 5. The program then accesses the value of "x" and increments it by 1.
-
-The program declares the integer variable "x" and assigns it the value of 5. The operating system, using its memory management functions, assigns a virtual memory address to "x" in the program's virtual address space.
-
-When the program wants to access the value of "x", the CPU generates a memory request with the virtual memory address of "x".
-
-The MMU receives the memory request and translates the virtual memory address of "x" to the corresponding physical memory address.
-
-The MMU then accesses the physical memory at that address and retrieves the value of "x" (which is 5).
-
-The CPU receives the value of "x" and performs the operation of incrementing it by 1, now the value of "x" is 6
-
-When the program wants to save the value 6 for x, the CPU generates a memory request with the virtual memory address of "x" and the new value 6.
-
-The MMU receives the memory request, translates the virtual memory address of "x" to the corresponding physical memory address and updates the value of x in the physical memory.
-
-So in this example, the program uses virtual memory addresses to access the value of the variable "x", but the actual memory accesses are performed using physical memory addresses. The MMU is responsible for translating the virtual memory addresses to physical memory addresses, and for managing the memory allocation and deallocation.
-
-
-
-فاش كانديكلاريو شي variable الOS كايAllocy لينا Memory للداك الVariable باستعمال Virtual Memory باش نقدوا نخدموا البروغرام , من بعد كايشد MMU داك الMemory و كايدير اش كانسميوا Mapping Or Paging لPhysical Memory Address ف(RAM أولا Hard Disk) هاد Address The Physical Address هي الActual Location تاع Memory , ادن فاش تبغي تمشي للداك الVariable الCPU كايدير واحد الRequest من Virtual Address تاع الVariable كايجي سي MMU كايترجم ديك الVirtual Address للPhysical Address ()RAM الRAM كايخد ديك الValue لي مخبع تما و كايردها للCPU . يعني بخلاصة فاش كانبغيو شي Variable كنا قبل خدمناه الMMU كايدير بحال واحد الLien نيشان مع الPhysical Memory من تم الCPU كايAccessy نيشان للVariable و يبدلوا كيف ما بغى
+فاش كانديكلاريو شي variable الOS كايAllocy لينا Memory للداك الVariable باستعمال Virtual Memory باش نقدوا نخدموا البروغرام , من بعد كايشد MMU داك الMemory و كايدير اش كانسميوا Mapping Or Paging لPhysical Memory Address ف(RAM أولا Hard Disk) هاد  Physical Address هي الActual Location تاع Memory , ادن فاش تبغي تمشي للداك الVariable الCPU كايدير واحد الRequest من Virtual Address تاع الVariable كايجي سي MMU كايترجم ديك الVirtual Address للPhysical Address ()RAM الRAM كايخد ديك الValue لي مخبع تما و كايردها للCPU . يعني بخلاصة فاش كانبغيو شي Variable كنا قبل خدمناه الMMU كايدير بحال واحد الLien نيشان مع الPhysical Memory من تم الCPU كايAccessy نيشان للVariable و يبدلوا كيف ما بغى
   
   
   
