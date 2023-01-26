@@ -10,6 +10,7 @@ Thank you for taking the time to check it out!
 </p>
 
 # Table of Contents  
+
   * [OOP](#oop)
     * [Why do we need OOP ?](#why-do-we-need-oop)
     * [What's a Class](#whats-a-class)
@@ -24,6 +25,33 @@ Thank you for taking the time to check it out!
   * [Memory Allocation](#memory-allocation)  
     * [Pointers](#pointers)
     * [References](#references)
+
+# Why C++ was developed and its advantages over C ?
+
+C++ is an extension of the C programming language, which was created to add OOP features to C
+
+We can simulate classes by using structs and function pointers but it's not elegant and it's not that powerful as classes in C++ and the code becomes more complex and harder to maintain.
+
+C++ was designed to provide a more efficient and expressive way to program large-scale projects, such as :
+
+ - Operating systems (Linux ...)
+ - Game engines (such as Unreal Engine and Unity ...)
+ - Web browsers (such as Google Chrome, Firefox and Edge ...)
+ - Desktop applications (Adobe Family ...)
+
+C++ adds several features to C, such as :
+
+- Classes and objects
+- Inheritance
+- Polymorphism
+- Operator overloading
+- Templates (which are a powerful tool for creating generic code)
+- Exceptions (which allows for more robust error handling)
+- Namespace (which provide a way to organize code and avoid naming conflicts)
+
+In summary, C++ was developed as an extension of C to provide additional features and capabilities, such as object-oriented programming and templates, to make it more suitable for large-scale projects. While C is still widely used and has a lot of legacy code, C++ is a more powerful and versatile language that is well-suited for a wide range of modern programming challenges.
+
+* 
 
 # OOP
 
@@ -44,6 +72,24 @@ A class in C++ is a blueprint (بلان) for creating objects (a particular data
   Classes also because they can create objects that can store state and provide behavior which can be used to model real world problems in a program
 
   Additionally, classes can be reused to create new objects without having to redefine their properties and behavior each time.
+ 
+  <p>
+  <img src="imgs/banking.gif" width="1000" height="300"/>
+  </p>
+  
+  For example, a "BankAccount" class could be created which has properties such as :
+  
+ - Account number
+ - Balance
+ - Account type
+ 
+ And methods such as :
+
+ - Deposit
+ - Withdraw
+ - Check balance.
+
+Each account can be represented as an object created from the class "BankAccount"
 
 ## Why do we need OOP
 
