@@ -25,6 +25,7 @@ Thank you for taking the time to check it out!
   * [Memory Allocation](#memory-allocation)  
     * [Pointers](#pointers)
     * [References](#references)
+  * [Common Questions](#memory-allocation)  
 
 # Why C++ was developed and its advantages over C ?
 
@@ -258,6 +259,8 @@ So the compiler needs to handle that operator based on whether it has been overl
    >> - Whereas the reference gets assigned one time, and it just becomes a reference to that location in memory
   ***
 
+## شويا ديال Memory : 
+
 When a function uses a reference, it can directly access the variable without an additional memory fetch.
 
 A pointer, however, must use the indirection operator (*) to access the value of the variable, which requires an additional memory fetch.
@@ -281,5 +284,29 @@ In short, a memory fetch is the process of retrieving data from memory, it's the
   
   
   
-  
  
+# Common Questions 
+
+## Why should i chose to hide member function or member variables ?
+
+Private members in C++ are class members that can only be accessed by the member functions inside the class. This helps to protect data from accidental modifications and changes, as well as preventing unintended or intended changes.
+
+
+  <p align="center">
+    <img src="imgs/private.png" width="600">
+  </p>
+
+
+- Encapsulation: Hiding the implementation details of a class from other classes can help to protect the integrity of the data and methods within the class, and prevent external classes from making unexpected changes to them.
+
+- Abstraction: By exposing only a limited set of public methods, a class can provide a simplified and more abstract interface to other classes, making it easier to use and understand.
+
+- Flexibility: Making members private allows the implementation of a class to change without affecting other classes that use it, as long as the public interface remains the same.
+
+- Security: By making members private, it is harder for external classes to access and manipulate the data of a class in unintended ways, thus increasing security.
+
+Overall, using private members in C++ helps to promote good software design and maintainable code.
+
+
+فاش كانختارو نديرو شي Member Variables or Functions يكون Private يعني كانمنعو الClassess الاخرين باش مايAccessiw للدلك Attribute, هادشي كايعاون على اننا نحميوا من أي تغيير يقد يطرا مقصود اولا لا , و من زاوية اخرى تقد تشوفها على أننا كان Limitiw Scope ديال أي تغيير نبغيو نديروه حيتاش كانخدموا غير فالClass ديالنا.
+
