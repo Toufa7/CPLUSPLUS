@@ -33,7 +33,11 @@ C++ is an extension of the C programming language, which was created to add OOP 
 
 We can simulate classes by using structs and function pointers but it's not elegant and it's not that powerful as classes in C++ and the code becomes more complex and harder to maintain.
 
+نقدوا نديروا بحال واحد المحاكاة لل OOP نخدموا بStructs وFunction Pointers من تم نبقاو نسيفطوا الStruct كArguments و لكن ماشي بحال القوة لي كايعطيوها الClassess ف C++ و نزيدك القاضية كاترون و الكود كايولي صعيب يتفهم و يتصلح .
+
 C++ was designed to provide a more efficient and expressive way to program large-scale projects, such as :
+
+لغة C++ تصايبات باش تعطي واحد الكفاءة و طريقة باش تخدم Projects كبار بحال :
 
  - Operating systems (Linux ...)
  - Game engines (such as Unreal Engine and Unity ...)
@@ -51,6 +55,9 @@ C++ adds several features to C, such as :
 - Namespace (which provide a way to organize code and avoid naming conflicts)
 
 In summary, C++ was developed as an extension of C to provide additional features and capabilities, such as object-oriented programming and templates, to make it more suitable for large-scale projects. While C is still widely used and has a lot of legacy code, C++ is a more powerful and versatile language that is well-suited for a wide range of modern programming challenges.
+
+
+بخلاصة لفة C++ تصايبات باش تكون اضافة للC و جابت حاجات او ميزات جداد بحال OOP لي كاتمكنك تخدم Projects كبار, هادشي مكايعنيش انه C مازال الناس خدامين بيها لكن C++ قوية بزاف و متعددة الخصائص لي كامكنها تتاسب مع بزاف ديال التحديات الجداد دبال دابا .
 
 * 
 
