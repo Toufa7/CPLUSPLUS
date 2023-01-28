@@ -18,6 +18,10 @@ Thank you for taking the time to check it out!
     * [Definition](#definition)
     * [Benefits](#benefits)
     * [Example](#example)
+  * [Floating Point Representation](#floating-point-representation)  
+  
+  
+  **
   * [Operator Overloading](#operator-overloading)  
     * [Definition](#definition)
     * [Advantages and Disadvantages](#advantages-and-disadvantages)
@@ -180,6 +184,56 @@ Once a namespace is defined, its elements can be accessed using the scope resolu
 > The use of namespace can be convenient in small programs :
 > - It allows you to access elements in the namespaces without mention the namespace
 > - But it's a BAD PRACTICE in large codebases in a code that will be shared with others (حيتاش داكشي يقد يدير الله يحفظ :sweat_smile:  شي Conflicts)
+
+# Floating Point Representation
+
+To represent the decimal number 263.3 in floating point representation, we will use the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) format. This format includes 3 main components:
+
+
+<p>
+<img src="imgs/fpr.png" width="1000">
+</p>
+
+
+To convert So the final floating-point representation of 172.625 using the IEEE 754 format is:to floating-point representation, we need to follow these steps:
+
+
+
+<p align="center">
+<img src="imgs/1.png" width="500">
+</p>
+
+<p align="center">
+<img src="imgs/3.png" width="600">
+</p>
+
+<p align="center">
+<img src="imgs/4.png" width="700">
+</p>
+
+<p align="center">
+<img src="imgs/gif.gif" width="800">
+</p>
+
+In this case, we need to shift 7 positions to the right. Since the exponent is stored as an 8-bit field, it needs to be represented in excess-127 notation.
+
+So the exponent field will be : 
+
+<p align="center">
+<img src="imgs/Screen Shot 2023-01-28 at 10.54.08 PM.png" width="900">
+</p>
+
+
+
+So the final floating-point representation of 172.625 using the IEEE 754 format is:
+
+
+<p align="center">
+<img src="imgs/Screen Shot 2023-01-28 at 10.42.18 PM.png" width="1000">
+</p>
+
+
+
 
 # Operator Overloading
 
