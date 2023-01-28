@@ -164,6 +164,9 @@ Then the class "Parrot" have a new method called "speak()" and variable member "
   
 Once a namespace is defined, its elements can be accessed using the scope resolution operator (::)
 
+
+تقاد تبان ليك بحال شي صندوق لي تاتخبي فيه داكشي لي باغي ,  نقدوا متلا يكون عندنا Namespace سميتوا Bank لي نقدوا نخبيوا فيه اي حاجة عندها علاقة بالبنك بحال Variables (AccountNbr, Balance) أولا Function (CheckBalance) و حتى  Classess و نقدوا نزيدوا Namespaces اخريين مهم صندوق جامع كلشي . 
+
   ## Benefits
 
   Namespaces provide a way to organize code, prevent naming conflicts, and improve code reuse, readability, and maintainability.
