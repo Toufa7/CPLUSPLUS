@@ -210,7 +210,7 @@ To represent the decimal number 263.3 in floating point representation, we will 
 </p>
 
 
-To convert So the final floating-point representation of 172.625 using the IEEE 754 format is:to floating-point representation, we need to follow these steps:
+To convert 172.625 to floating-point representation using the IEEE 754 we need to follow these steps:
 
 
 
