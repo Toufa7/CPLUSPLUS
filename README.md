@@ -4,7 +4,21 @@
 I am excited to share my journey of learning C++ with you.
 <p align="center">
 I hope you will find the information and resources in this repository helpful.
-           
+
+<p align="center">
+
+<p align="center">
+If you have any questions or need help understanding something related to this repository,
+
+<p align="center">
+
+
+Please feel free to reach out to me on [[Discord]](https://discord.com/channels/904787863487528971/) and I'll do my best to assist yo
+
+<p align="center">
+<img src="imgs/mo.gif" alt="Discord Shield"/>
+<p align="center">
+
 <p align="center">
 Thank you for taking the time to check it out!
 
