@@ -4,6 +4,7 @@
 I am excited to share my journey of learning C++ with you.
 <p align="center">
 I hope you will find the information and resources in this repository helpful.
+           
 <p align="center">
 Thank you for taking the time to check it out!
 
@@ -187,7 +188,7 @@ Once a namespace is defined, its elements can be accessed using the scope resolu
 
 # Floating Point Representation
 
-To represent the decimal number 263.3 in floating point representation, we will use the [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) format. This format includes 3 main components:
+To represent the decimal number 263.3 in floating point representation, we will use the [IEEE 754](https://learn.microsoft.com/en-us/cpp/build/ieee-floating-point-representation?view=msvc-170) format. This format includes 3 main components:
 
 
 <p>
