@@ -203,32 +203,43 @@ To represent the decimal number **172.625** in floating point representation, we
 
 To convert 172.625 to floating-point representation using the IEEE 754 we need to follow these steps:
 
-
+أول حاجة كانشدوا الرقم و كانحيدوا منو Fractional Part أولا الرقم لي من مور الفاصلة , و من بعد كانحولوه للBinary 
 
 <p align="center">
 <img src="imgs/1.png" width="500">
 </p>
 
+
+داكشي لي بقا من الرقم و لي هوا العدد لي من مور الفاصلة كانبقاو نضربوه ف2 ونقيدوا يا 0 أولا 1 هادشي كايبقا يتعاود تكنوصلوا لل0 أولا واحد الPattern كاتبقا تعاود.
+
+
 <p align="center">
 <img src="imgs/3.png" width="600">
 </p>
+
+دابا جمع الارقام ب2 وهوما محوليين لل Binary بحال هكا :
 
 <p align="center">
 <img src="imgs/4.png" width="700">
 </p>
 
+
+دابا المرحلة ديال الExponent خاصنا هنا نحركوا الفاصلة للأقصى اليسار قبل من الرقم 1 كيف ما باين هنايا :
+
 <p align="center">
 <img src="imgs/gif.gif" width="800">
 </p>
+
 
 In this case, we need to shift 7 positions to the right. Since the exponent is stored as an 8-bit field, it needs to be represented in excess-127 notation.
 
 So the exponent field will be : 
 
+فالبلاصة ديال Sign ايلا كان الرقم سلبي 1 و ايلا كان ايجابي 0 :
+
 <p align="center">
 <img src="imgs/Screen Shot 2023-01-28 at 10.54.08 PM.png" width="900">
 </p>
-
 
 
 So the final floating-point representation of 172.625 using the IEEE 754 format is:
@@ -239,6 +250,7 @@ So the final floating-point representation of 172.625 using the IEEE 754 format 
 </p>
 
 
+دابا جمع الSign و الExponent و الMantissa فالحالة ديال Float الMantissa كاتكون 23 Bits و بالنسبة للDouble 52 Bits , ايلا كنتي حولتي الFractional Part للBinary و بقات كاتعاود حبس حد 23 ايلا كانت قل حطهم فالبلاصة ديال Mantessa و لي بقا عمرهم ب 0.
 
 
 # Operator Overloading
