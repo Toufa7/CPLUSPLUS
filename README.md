@@ -67,9 +67,8 @@ C++ adds several features to C, such as :
 In summary, C++ was developed as an extension of C to provide additional features and capabilities, such as object-oriented programming and templates, to make it more suitable for large-scale projects. While C is still widely used and has a lot of legacy code, C++ is a more powerful and versatile language that is well-suited for a wide range of modern programming challenges.
 
 
-بخلاصة لفة C++ تصايبات باش تكون اضافة للC و جابت حاجات او ميزات جداد بحال OOP لي كاتمكنك تخدم Projects كبار, هادشي مكايعنيش انه C مازال الناس خدامين بيها لكن C++ قوية بزاف و متعددة الخصائص لي كامكنها تتاسب مع بزاف ديال التحديات الجداد دبال دابا .
+بخلاصة لغة C++ تصايبات باش تكون اضافة للC و جابت حاجات او ميزات جداد بحال OOP لي كاتمكنك تخدم Projects كبار, هادشي مكايعنيش انه C ماتت فمازال الناس خدامين بيها لكن C++ قوية بزاف و متعددة الخصائص لي كامكنها تتاسب مع بزاف ديال التحديات الجداد دبال دابا .
 
-* 
 
 # OOP
 
