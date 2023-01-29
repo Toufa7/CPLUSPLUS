@@ -193,7 +193,7 @@ Once a namespace is defined, its elements can be accessed using the scope resolu
 
 # Floating Point Representation
 
-To represent the decimal number 263.3 in floating point representation, we will use the [IEEE 754](https://learn.microsoft.com/en-us/cpp/build/ieee-floating-point-representation?view=msvc-170) format. This format includes 3 main components:
+To represent the decimal number **172.625** in floating point representation, we will use the [IEEE 754](https://learn.microsoft.com/en-us/cpp/build/ieee-floating-point-representation?view=msvc-170) format. This format includes 3 main components:
 
 
 <p>
