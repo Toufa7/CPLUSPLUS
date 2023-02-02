@@ -1,18 +1,23 @@
 #include "./Zombie.hpp"
 
-void    Zombie::announce( void )
-{
-    std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+// It's important to free the dynamically allocated memory when it is no longer needed to prevent memory leaks in the program
 
 int main()
 {
-    // Pointer to Zombie
-    // Zombie  *twd;
+    /*******************************
+            * ! Stack
+    ********************************/
+
     randomChump("Omar");
 
-    // twd = newZombie("Omar");
-    // twd->announce();
-    // delete twd;
+    /*******************************
+            * ? Heap
+    ********************************/
+
+    Zombie  *TheWalkingDead;
+
+    TheWalkingDead = newZombie("Toufah");
+    TheWalkingDead->announce();
+    delete TheWalkingDead;
     return (0);
 }

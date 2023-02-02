@@ -2,88 +2,42 @@
 #include <string>
 #include <fstream>
 
-int main (int ac, char *av[])
+int main(int ac, char *av[])
 {
-	std::ifstream	in;
-	std::ofstream	out;
+    std::ifstream   input;
+	std::ofstream	output;
 
-	std::string		input;
-	std::string		needle;
-	std::string		replace;
-	std::string		input_file;
-	std::string		output_filename = input_file + ".replace";
+    std::string     needle;
+    std::string     replace;
+    std::string     data;
 
-	input_file = av[1];
-	needle = av[2];
+
+    needle = av[2];
 	replace = av[3];
 
-	if (ac == 4)
+	if (ac == 3)
 	{
-		in.open(input_file);
-		if (in.is_open())
+		input.open(av[1]);
+		if (input.is_open())
 		{
-			while (std::getline(in, input))
+			output.open(std::string(av[1]) + ".replace");
+			while (std::getline(input, data))
 			{
 				size_t idx = 0;
-				while((idx = input.find(needle, idx)) != std::string::npos)
+				while ((idx = data.find(needle, idx)) != -1)
 				{
-					input.replace(idx, needle.length(), replace);
+					data.erase(idx, replace.length());
+					data.insert(idx, replace);
+					output << data << std::endl;
 					idx += replace.length();
 				}
-				output_filename << input_file << std::endl;
 			}
-			in.close();
-			out.close();
-		}	
-		else
-		{
-			std::cerr << "Error: " << input_file << " could not be opened" << std::endl;
+			input.close();
+			output.close();
 		}
+		else
+			std::cerr << "Error: " << av[1] << " could not be opened" << std::endl;
 	}
 	else
 		std::cerr << "Provide us with 3 Args : [filename] [needle] [replace]" << std::endl;
 }
-
-
-// #include <iostream>
-// #include <string>
-// #include <fstream>
-
-
-// int main (int ac, char *av[])
-// {
-// 	std::ifstream	in;
-// 	std::ofstream	out;
-
-// 	std::string		input_file;
-// 	std::string		needle;
-// 	std::string		replace;
-// 	std::string		filename;
-// 	std::string		output_file = filename + "replace";
-
-// 	filename = av[1];
-// 	needle = av[2];
-// 	replace = av[3];
-// 	if (ac == 4)
-// 	{
-// 			while (std::getline(input_file, line))
-// 			{
-// 				size_t idx = 0;
-// 				while((idx = line.find(needle, idx)) != std::string::npos)
-// 				{
-// 					line.replace(idx, needle.length(), replace);
-// 					idx += replace.length();
-// 				}
-// 				output_file << line << std::endl;
-// 			}
-// 			input_file.close();
-// 			output_file.close();
-// 		}
-// 		else
-// 		{
-// 			std::cerr << "Error: " << filename << " could not be opened" << std::endl;
-// 		}
-// 	}
-// 	else
-// 		std::cerr << "Provide us with 3 Args : [filename] [needle] [replace]" << std::endl;
-// }

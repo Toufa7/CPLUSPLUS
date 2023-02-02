@@ -1,13 +1,11 @@
-NAME = Moar_brainz
+NAME = weapons
 
 CPP = c++
 
 CPP_FLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILES = main.cpp \
-		Zombie.cpp \
-		zombieHorde.cpp \
-		
+
 all : $(NAME)
 
 $(NAME) : $(FILES)

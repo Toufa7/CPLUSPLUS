@@ -6,11 +6,13 @@ CPP_FLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILES = newZombie.cpp \
 		randomChump.cpp \
+		Zombie.cpp \
+		main.cpp \
 
 all     : $(NAME)
 
 $(NAME) : $(FILES)
-		$(CPP) $(CPP_FLAGS) $(FILES) ./main.cpp -o $(NAME)
+		$(CPP) $(CPP_FLAGS) $(FILES) -o $(NAME)
 
 RM = rm -rf
 

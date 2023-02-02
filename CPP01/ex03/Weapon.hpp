@@ -9,12 +9,10 @@ class Weapon
     private:
         std::string type;
     public:
-        const std::string& getType();
-        // For sake of good practice
-        void    setType(std::string type);
-        // This is actually a pointer point to object that membre function working on
         Weapon();
         Weapon(std::string type);
+        const   std::string& getType();
+        void    setType(std::string type);
         ~Weapon();
 };
 

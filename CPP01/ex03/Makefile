@@ -4,14 +4,15 @@ CPP = c++
 
 CPP_FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILES = Weapon.cpp \
+FILES = main.cpp   \
+		Weapon.cpp \
 		HumanA.cpp \
 		HumanB.cpp \
 
 all : $(NAME)
 
 $(NAME) : $(FILES)
-		$(CPP) $(CPP_FLAGS) $(FILES) main.cpp -o $(NAME)
+		$(CPP) $(CPP_FLAGS) $(FILES) -o $(NAME)
 
 RM = rm -rf
 

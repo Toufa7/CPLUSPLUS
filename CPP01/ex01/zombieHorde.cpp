@@ -2,12 +2,13 @@
 
 Zombie* zombieHorde( int N, std::string name )
 {
-    Zombie *hello;
-    
-    hello = new Zombie[N] ;
+    // <data_type> *<ptr_name> = new <dat_type>[<size>]
+    Zombie *NewZombie = new Zombie[N];
+
     for (int i = 0; i < N ; i++)
     {
-        randomChump(name);
+        NewZombie[i] = name;
+        NewZombie->announce();
     }
-    return (hello);
+    return (NewZombie);
 }

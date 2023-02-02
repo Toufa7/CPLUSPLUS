@@ -8,12 +8,11 @@ class HumanB
 {
     private:
         std::string name;
-        Weapon Human_b;
+        Weapon      *Human_b;
     public:
-    // Refrence to a Weapon object
-        void    setWeapon(Weapon Human_b);
-        void attack();
         HumanB(std::string name);
+        void    attack();
+        void    setWeapon(Weapon& Human_b);
         ~HumanB();
 };
 

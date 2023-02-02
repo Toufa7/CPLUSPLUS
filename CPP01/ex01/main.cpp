@@ -1,16 +1,10 @@
 #include "./Zombie.hpp"
 
-void    Zombie::announce( void )
-{
-    std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
 int main()
 {
-    Zombie  *twd;
+    Zombie  *TheWalkingDead;
 
-    twd = zombieHorde(4, "Omar 8");
-    // twd->announce();
-    delete [] twd;
+    TheWalkingDead = zombieHorde(10, "Toufa7");
+    delete [] TheWalkingDead;
     return (0);
 }
