@@ -391,3 +391,23 @@ Overall, using private members in C++ helps to promote good software design and 
 
 فاش كانختارو نديرو شي Member Variables or Functions يكون Private يعني كانمنعو الClassess الاخرين باش مايAccessiw للدلك Attribute, هادشي كايعاون على اننا نحميوا من أي تغيير يقد يطرا مقصود اولا لا , و من زاوية اخرى تقد تشوفها على أننا كان Limitiw Scope ديال أي تغيير نبغيو نديروه حيتاش كانخدموا غير فالClass ديالنا.
 
+
+
+## Operator Overloading : 
+
+As we’ve seen, the IO library uses >> and << for input and output :
+
+
+  <p align="center">
+    <img src="imgs/Screen Shot 2023-02-04 at 4.23.38 PM.png" width="700">
+  </p>
+
+
+## Overloading the Output Operator <<
+
+  <p align="center">
+    <img src="imgs/overloading >>.png" width="700">
+  </p>
+
+
+## Overloading the Output Operator >>
