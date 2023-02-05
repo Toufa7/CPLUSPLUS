@@ -411,3 +411,20 @@ As we’ve seen, the IO library uses >> and << for input and output :
 
 
 ## Overloading the Output Operator >>
+
+
+
+# Diffrence between Copy 
+
+
+A copy constructor and a copy assignment operator are both used to make a copy of an object in C++. The difference is when you use them.
+
+## Copy constructor :
+
+Is used when you first make a new object and you want to make a copy of it.
+
+## Copy assignment operator:
+
+Is used when you already have an object and you want to make a copy of it into a different object.
+
+It's like making a copy of a picture. The copy constructor is like making a new picture right away, while the copy assignment operator is like taking an old picture and making a copy of it.
