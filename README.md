@@ -25,6 +25,7 @@ Thank you for taking the time to check it out!
     * [Benefits](#benefits)
     * [Example](#example)
   * [Floating Point Representation](#floating-point-representation)  
+  * [Errors And Solutions](#errors-and-solutions)  
   
   
   **
@@ -428,3 +429,11 @@ Is used when you first make a new object and you want to make a copy of it.
 Is used when you already have an object and you want to make a copy of it into a different object.
 
 It's like making a copy of a picture. The copy constructor is like making a new picture right away, while the copy assignment operator is like taking an old picture and making a copy of it.
+
+
+# Errors and solutions
+
+  <p align="center">
+    <img src="imgs/Screen Shot 2023-02-06 at 3.29.52 PM.png" width="700">
+  </p>
+
