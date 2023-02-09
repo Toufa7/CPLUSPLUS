@@ -1,6 +1,6 @@
-NAME = BraiiiiiiinnnzzzZ
+NAME = ex00
 
-CPP      = c++
+CPP  = c++
 
 CPP_FLAGS = -Wall -Wextra -Werror -std=c++98
 

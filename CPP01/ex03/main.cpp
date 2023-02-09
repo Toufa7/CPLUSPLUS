@@ -6,19 +6,19 @@
 int main()
 {
     {
-        Weapon club = Weapon("Weapon 1");
+        Weapon club = Weapon("Kniff");
         HumanA bob("Bob", club);
         bob.attack();
-        club.setType("Weapon 2");
+        club.setType("Gun");
         bob.attack();
     }
 
     {
-        Weapon club = Weapon("Weapon 1");
+        Weapon club = Weapon("Kniff");
         HumanB jim("Jim");
         jim.setWeapon(club);
         jim.attack();
-        club.setType("Weapon 2");
+        club.setType("Gun");
         jim.attack();
     }
 

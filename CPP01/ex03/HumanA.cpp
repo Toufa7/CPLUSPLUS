@@ -5,7 +5,7 @@
         * ? Parametrized Constructor
 *********************************************/
 
-HumanA::HumanA(std::string name ,Weapon& Hu) : Human_a(Hu)
+HumanA::HumanA(std::string name ,Weapon &Hu) : Human_a(Hu)
 {
     this->name = name;
     // std::cout << "Parameterized HumanA constructor" << std::endl;

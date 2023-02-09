@@ -23,5 +23,5 @@ void    Zombie::announce( void )
 
 Zombie::~Zombie()
 {
-    std::cout << "Destructor" << std::endl;
+    std::cout << "Destructor " << this->name << " Destroyed"<< std::endl;
 }  

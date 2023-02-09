@@ -15,7 +15,7 @@ int main(int ac, char *av[])
     needle = av[2];
 	replace = av[3];
 
-	if (ac == 3)
+	if (ac == 4)
 	{
 		input.open(av[1]);
 		if (input.is_open())
@@ -24,9 +24,9 @@ int main(int ac, char *av[])
 			while (std::getline(input, data))
 			{
 				size_t idx = 0;
-				while ((idx = data.find(needle, idx)) != -1)
+				while ((idx = data.find(needle, idx)) != std::string::npos)
 				{
-					data.erase(idx, replace.length());
+					data.erase(idx, needle.length());
 					data.insert(idx, replace);
 					output << data << std::endl;
 					idx += replace.length();

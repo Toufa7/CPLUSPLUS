@@ -1,4 +1,4 @@
-NAME = weapons
+NAME = ex03
 
 CPP = c++
 

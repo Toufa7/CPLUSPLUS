@@ -26,16 +26,15 @@ void    Harl::error()
 
 void    Harl::complain(std::string level)
 {
-    void    (Harl::*PFn[])() =
+    void    (Harl::*PFn[4])() =
     {
         &Harl::debug,
         &Harl::info,
         &Harl::warning,
         &Harl::error
     };
-    std::cout << "Add " << &Harl::debug << std::endl;
 
-    std::string Complaints[] =
+    std::string Complaints[4] =
     {
         "DEBUG",
         "INFO",
@@ -58,16 +57,19 @@ void    Harl::complain(std::string level)
 int main()
 {
     Harl    Client;
-
-    //          Working
+    /*
+        *   !   Working
+    */          
     {
-        Client.complain("AEBUGDEBUG");   
         Client.complain("INFO");
         Client.complain("WARNING");
         Client.complain("ERROR");
     }
-    //          Not Working
+    /**
+        *   ! Not Working
+    */
     {
+        Client.complain("AEBUGDEBUG");   
         Client.complain("SEBUG");
         Client.complain("");
     }

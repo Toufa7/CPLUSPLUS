@@ -1,4 +1,4 @@
-NAME = pointers
+NAME = ex02
 
 CPP = c++
 
