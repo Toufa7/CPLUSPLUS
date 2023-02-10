@@ -372,6 +372,13 @@ In short, a memory fetch is the process of retrieving data from memory, it's the
   
   
   
+# المواجهة مابين Stack و Heap
+
+اللا خدينا بعين الاعتبار الSize فالStack كايعطيك داكشي محدرد يعني مع كاتخدم الProgram ديالك كايعطيك ال OS واحد البركة ايلا خدينا ال MacOS كايعطي 8MB لكل Thread مزيان تالهنا , يعني الProgram ديالك ايلا خدم ديك الميموري كاملة راه غادي يOverflowi, على عكس الHeap لي داكشي كايكون Dynamic يعني كايAllocy ليك ميموري على حساب داكشي لي باغي فالRun Time , من جهة اخري الStack كايAllocy 
+ليك ميموري بزربة و بطريقة فعالة (ههه حسيت بهاد فعالة كانشرح معجون الأسنان ههه)
+ و بالنسبة لل Access كايكون بزرية عكس الHeap لي خاصك عن طريق داك الPointer عاد تعرف الValue لي واخدها داك الPointer و اخر حاجة هي انه الStack هوا راسو كايتكفل بالMemory Managment ديال داكشي لي Alloca ليك يعني Implicit ماشي بحال الHeap لي ضروري خاصك تDelety اولا تFreey داكشي لي خدمتي بيه يعني Explicit
+ صافي واقبلا ...
+  
  
 # Common Questions 
 
@@ -443,7 +450,9 @@ Since i already done CUB3D i'll demonstrate this using the Cub3d Engine
 So the issue in the 3D engine is that the machine is unable to perform floating point operations quickly enough, which is crucial for the engine's functionality because it requires a lot of trigonometry. The solution is to use a technique called "fixed-point arithmetic" which is a way to perform arithmetic operations in a more efficient manner, by representing decimal values as fixed-point numbers and using integer operations to manipulate them. This helps the ALU (Arithmetic Logic Unit) perform the required calculations more quickly.
 
 
-دابا ايلا خدينا Cub3d كمتال كنا حتاجينا بزاف دبال precision اقل متال فاش كانبغيوا نحسبوا نقطة ديال الالتقاء ديال Ray [x][x] فخدمنا الCos & Sin و خديناهم كDouble حيتاش محتاجين الدقة فهادشي التابيعات ديالوا هو انه CPU و بالضبط الALU لي مكلف بالعمليات الحسابية + - / * صعيب ماشي صعيب كاياخد ليه الوقت بزاف فشنوا درنا بحال ايلا خدعنا الALU و صيفطنا ليه دوك الأرقام لي بالفاصلة كأرقام بلاش المتال لتحت كايوضح هادشي :
+دابا ايلا خدينا Cub3d كمتال كنا حتاجينا بزاف دبال precision اقل متال فاش كانبغيوا نحسبوا نقطة ديال الالتقاء ديال Ray [y][x] فخدمنا الCos & Sin و خديناهم كDouble حيتاش محتاجين الدقة فهادشي التابيعات ديالوا هو انه CPU و بالضبط الALU لي مكلف بالعمليات الحسابية + - / * صعيب ماشي صعيب كاياخد ليه الوقت بزاف فشنوا درنا بحال ايلا خدعنا الALU و صيفطنا ليه دوك الأرقام لي بالفاصلة كأرقام بلاش المتال لتحت كايوضح هادشي :
+
+
 
   <p align="center">
     <img src="imgs/Screen Shot 2023-02-07 at 11.54.30 AM.png" width="700">
