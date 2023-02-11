@@ -15,92 +15,34 @@ class Fixed
     public:
 
         Fixed();
-
-        Fixed (const int floaat);
-
-		Fixed (const float floaat);
-
-        Fixed (const Fixed &a);
-
         ~Fixed ();
-
+        Fixed (const Fixed &a);
         Fixed & operator = (const Fixed &rhs);
 
-		float	toFloat( void ) const;		
 
+        Fixed (const int floaat);
+		Fixed (const float floaat);
+
+		float	toFloat( void ) const;		
 		int 	toInt( void ) const;
 
+
         bool    operator > (const Fixed &a) const;
-
         bool    operator < (const Fixed &a) const;
-
         bool    operator >= (const Fixed &a);
-
         bool    operator <= (const Fixed &a);
-
         bool    operator == (const Fixed &a);
-
         bool    operator != (const Fixed &a);
 
+        Fixed & operator ++ ();
+        Fixed & operator -- ();
+        Fixed operator ++ (int);
+        Fixed operator -- (int);
 
         Fixed  operator + (Fixed const &A);
- 
         Fixed  operator - (Fixed const &A);
-
-        Fixed  operator * (Fixed const &A);
-
-        // Fixed  operator / (Fixed const &A)
-        // {
-        //     return (*this);
-        // }
-
-
-        Fixed & operator ++ ()
-        {
-            this->integer++;
-            return (*this);
-        }
-
-        Fixed & operator -- ()
-        {
-            this->integer--;
-            return (*this);
-        }
-
-        Fixed operator ++ (int)
-        {
-            Fixed Copy;
-
-            Copy = *this;
-            this->integer++;
-            return (Copy);
-        }
-
-        Fixed operator -- (int)
-        {
-            Fixed Copy;
-
-            Copy = *this;
-
-            this->integer--;
-            return (Copy);
-        }
-
-        // Fixed operator * ()
-        // {        
-        //     Fixed Result;
-
-        //     return (Result);
-        // }
-
-        // Fixed operator / ()
-        // {
-        //     Fixed Result;
-
-        //     return (Result);
-        // }
-
-
+        Fixed operator * (Fixed const &A);
+        Fixed operator / (Fixed const &A);
 
         static Fixed &   min(Fixed &A, Fixed & B)
         {
@@ -125,4 +67,3 @@ std::ostream & operator << (std::ostream & os, const Fixed & i);
 
 
 #endif
-

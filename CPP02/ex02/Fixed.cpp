@@ -90,6 +90,38 @@ bool    Fixed::operator != (const Fixed &a)
     return (this->integer == a.integer);
 }
 
+Fixed & Fixed::operator ++ ()
+{
+    this->integer++;
+    return (*this);
+}
+
+Fixed Fixed::operator ++ (int)
+{
+    Fixed Copy;
+
+    Copy = *this;
+    this->integer++;
+    return (Copy);
+}
+
+Fixed & Fixed::operator -- ()
+{
+    this->integer--;
+    return (*this);
+}
+
+Fixed Fixed::operator -- (int)
+{
+    Fixed Copy;
+
+    Copy = *this;
+
+    this->integer--;
+    return (Copy);
+}
+
+
 Fixed  Fixed::operator + (Fixed const &A)
 {
     Fixed Result;
@@ -105,10 +137,20 @@ Fixed  Fixed::operator - (Fixed const &A)
     return (Result);
 }
 
+Fixed Fixed::operator * (Fixed const &A)
+{        
+    int power = (int)pow(2, this->fractional);
 
-Fixed  Fixed::operator * (Fixed const &A)       
+    this->integer = (this->integer) * (A.integer) / power;
+
+    return (*this);
+}
+
+Fixed Fixed::operator / (Fixed const &A)
 {
-    this->integer *= ((float)A.integer / 256);
+    int power = pow(2, this->fractional);
+    
+    this->integer = (float(this->integer) / A.integer ) * power;
     return (*this);
 }
 
@@ -117,13 +159,12 @@ Fixed  Fixed::operator * (Fixed const &A)
 //         * ? Members Functions
 // *********************************************/
 
-
 // The resulting number will be the fixed-point representation of the integer
 // with 8 bits dedicated to representing the fractional part.
 
 float	Fixed::toFloat( void ) const
 {
-    return ((float)integer / 256);
+    return ((float)integer / pow(2, this->fractional));
 }
 
 int 	Fixed::toInt( void ) const

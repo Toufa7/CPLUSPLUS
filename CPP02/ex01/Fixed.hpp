@@ -5,6 +5,8 @@
 # include <string>
 # include <cmath>
 
+// The value of fractional determines the precision of the fixed-point representation
+
 class Fixed
 {
 	private:
@@ -12,25 +14,17 @@ class Fixed
 		static const int	fractional = 8;
 	public:
 		Fixed();
+		~Fixed();
+		Fixed( Fixed const & copy );
+		Fixed &		operator = ( Fixed const & rhs );
 
 		Fixed (const int floaat);
 		Fixed (const float floaat);
 
-		Fixed( Fixed const & copy );
-
-		~Fixed();
-
-		Fixed &		operator = ( Fixed const & rhs );
 		float	toFloat( void ) const;
 		int 	toInt( void ) const;
 };
 
 std::ostream &	operator << ( std::ostream & OstreamObject, Fixed const & Obj );
-
-// the first parameter of an output operator is a reference to a nonconst ostream object.
-// The ostream is nonconst because writing to the stream changes its state. 
-
-
-
 
 #endif

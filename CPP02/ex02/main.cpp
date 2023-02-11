@@ -2,27 +2,44 @@
 
 int main( void )
 {
-    // Fixed a;
-    // Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-    // std::cout << a << std::endl;
-    // std::cout << ++a << std::endl;
-    // std::cout << a << std::endl;
-    // std::cout << a++ << std::endl;
-    // std::cout << a << std::endl;
-    // std::cout << b << std::endl;
-    // std::cout << Fixed::max( a, b ) << std::endl;
+    Fixed a(100.78f);
 
-    Fixed a(5.1f);
+    std::cout << "A     = " << a << std::endl;
 
-    std::cout << a << std::endl;
+    Fixed b(2.98f);
 
-    Fixed b(10.1f);
+    std::cout << "B     = " << b << std::endl;
 
-    std::cout << b << std::endl;
+    Fixed c = a / b;
 
-    Fixed c = (a + b) ;
+    std::cout << "C     = " << c << std::endl;
 
-    std::cout << c << std::endl;
+    Fixed d = c * b;
+
+    std::cout << "D     = c * b = " << c << std::endl;
+
+    a = c + b;
+
+    std::cout << "New A = c + b = " << a << std::endl;
+
+    b = c - b;
+
+    std::cout << "New B = c - b = " << b << std::endl;
+
+
+
+    std::cout << (a < b) << std::endl;
+    std::cout << (a > b) << std::endl;
+    std::cout << (a <= b) << std::endl;
+    std::cout << (a >= b) << std::endl;
+    std::cout << (a != b) << std::endl;
+    std::cout << (a == b) << std::endl;
+
+    std::cout << "++B = " << ++b << std::endl;
+    std::cout << "B++ = " << b++ << std::endl;
+    std::cout << "Max = " << Fixed::max( a, b ) << std::endl;
+    std::cout << "Min = " << Fixed::min( a, b ) << std::endl;
+
 
     return 0;
 }
