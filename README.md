@@ -33,8 +33,6 @@ Thank you for taking the time to check it out!
   * [Floating Point Representation](#floating-point-representation)  
   * [Errors And Solutions](#errors-and-solutions)  
   
-  
-  **
   * [Operator Overloading](#operator-overloading)  
     * [Definition](#definition)
     * [Advantages and Disadvantages](#advantages-and-disadvantages)
@@ -42,6 +40,8 @@ Thank you for taking the time to check it out!
   * [Memory Allocation](#memory-allocation)  
     * [Pointers](#pointers)
     * [References](#references)
+  * [Inheritance](#inheritance)  
+   
   * [Common Questions](#memory-allocation)  
 
 # Why C++ was developed and its advantages over C ?
@@ -379,6 +379,16 @@ In short, a memory fetch is the process of retrieving data from memory, it's the
  و بالنسبة لل Access كايكون بزرية عكس الHeap لي خاصك عن طريق داك الPointer عاد تعرف الValue لي واخدها داك الPointer و اخر حاجة هي انه الStack هوا راسو كايتكفل بالMemory Managment ديال داكشي لي Alloca ليك يعني Implicit ماشي بحال الHeap لي ضروري خاصك تDelety اولا تFreey داكشي لي خدمتي بيه يعني Explicit
  صافي واقبلا ...
   
+ 
+# Memory Allocation
+ 
+   <p>
+    <img src="imgs/Base.png" width="800">
+  </p>
+ 
+ 
+ 
+ 
  
 # Common Questions 
 
