@@ -87,7 +87,7 @@ bool    Fixed::operator == (const Fixed &a)
 
 bool    Fixed::operator != (const Fixed &a)
 {
-    return (this->integer == a.integer);
+    return (this->integer != a.integer);
 }
 
 Fixed & Fixed::operator ++ ()
