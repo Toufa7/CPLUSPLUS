@@ -314,6 +314,7 @@ So the compiler needs to handle that operator based on whether it has been overl
    </p>
 
 
+
 # Memory Allocation
 
   ## Pointers
@@ -380,12 +381,57 @@ In short, a memory fetch is the process of retrieving data from memory, it's the
  صافي واقبلا ...
   
  
-# Memory Allocation
+# Inheritance
  
-   <p>
+ 
+ <p>
     <img src="imgs/Base.png" width="800">
   </p>
  
+ ## Function Overriding :
+ 
+ As we know, inheritance allow us to create derived classes from the base class
+then the derived class inherit features of the base class (Member functions ...)
+Suppose we inherit a function called whoami() now if we called the function
+through an object of the derived class the function in the the derived class
+will be executed
+ 
+ 
+<p>
+    <img src="imgs/FunctionOver.png" width="800">
+</p>
+ 
+ 
+  ## Access Overridden function: 
+  
+  To access the overridden function of a base class we need to use the scope resolution operator : 
+  
+<p>
+    <img src="imgs/codae.png" width="800">
+</p>
+ 
+ 
+<p>
+    <img src="imgs/Screen Shot 2023-02-13 at 11.41.21 AM.png" width="1000">
+</p>
+
+
+  ## Virtual Functions: 
+
+So if we create a pointer of Base type to point to an object of Derived class and call the whoami() function, it calls the whoami() function of the Base class :
+
+<p>
+    <img src="imgs/withoutVirtual.png" width="800">
+</p>
+
+In order to avoid this, we declare the whoami() function of the Base class as virtual by using the virtual keyword 
+
+
+<p>
+    <img src="imgs/withVirtual.png" width="800">
+</p>
+
+
  
  
  
@@ -393,6 +439,8 @@ In short, a memory fetch is the process of retrieving data from memory, it's the
 # Common Questions 
 
 ## Why should i chose to hide member function or member variables ?
+
+
 
 Private members in C++ are class members that can only be accessed by the member functions inside the class. This helps to protect data from accidental modifications and changes, as well as preventing unintended or intended changes.
 
@@ -415,6 +463,14 @@ Overall, using private members in C++ helps to promote good software design and 
 
 فاش كانختارو نديرو شي Member Variables or Functions يكون Private يعني كانمنعو الClassess الاخرين باش مايAccessiw للدلك Attribute, هادشي كايعاون على اننا نحميوا من أي تغيير يقد يطرا مقصود اولا لا , و من زاوية اخرى تقد تشوفها على أننا كان Limitiw Scope ديال أي تغيير نبغيو نديروه حيتاش كانخدموا غير فالClass ديالنا.
 
+
+
+## Can i declare member variables in cpp as virutal ?
+
+
+No, you cannot declare member variables as virtual in C++. Virtual is a keyword used to declare virtual functions, which are member functions that can be overridden by derived classes.
+
+Virtual functions are used to provide polymorphic behavior in object-oriented programming, and they can only be applied to member functions, not member variables
 
 
 ## Operator Overloading : 
