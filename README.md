@@ -40,7 +40,9 @@ Thank you for taking the time to check it out!
   * [Memory Allocation](#memory-allocation)  
     * [Pointers](#pointers)
     * [References](#references)
-  * [Inheritance](#inheritance)  
+  * [Inheritance](#inheritance)
+    * [Pure Virtual Function](#PureVirtualFunction)
+  
    
   * [Common Questions](#memory-allocation)  
 
@@ -389,7 +391,7 @@ In short, a memory fetch is the process of retrieving data from memory, it's the
   </p>
  
  ## Function Overriding :
- 
+  
  As we know, inheritance allow us to create derived classes from the base class
 then the derived class inherit features of the base class (Member functions ...)
 Suppose we inherit a function called whoami() now if we called the function
@@ -433,13 +435,27 @@ In order to avoid this, we declare the whoami() function of the Base class as vi
 
 
  
+ ## Pure Virtual Function
  
+ A pure virtual function is a function that is declared with the "= 0" syntax at the end of its declaration, like this:
+ 
+ <p>
+    <img src="imgs/pure.png" width="800">
+</p>
+
+ 
+ A class that contains at least one pure virtual function is called an abstract class.
+ 
+meaning that you cannot create an object of the abstract class. Instead, it is intended to be used as a base class for derived classes, which can inherit from it and implement the pure virtual functions.
+ 
+ A derived class that inherits from an abstract class must provide an implementation for each of the pure virtual functions defined in the abstract class.
+ 
+
  
  
 # Common Questions 
 
 ## Why should i chose to hide member function or member variables ?
-
 
 
 Private members in C++ are class members that can only be accessed by the member functions inside the class. This helps to protect data from accidental modifications and changes, as well as preventing unintended or intended changes.
@@ -463,6 +479,14 @@ Overall, using private members in C++ helps to promote good software design and 
 
 فاش كانختارو نديرو شي Member Variables or Functions يكون Private يعني كانمنعو الClassess الاخرين باش مايAccessiw للدلك Attribute, هادشي كايعاون على اننا نحميوا من أي تغيير يقد يطرا مقصود اولا لا , و من زاوية اخرى تقد تشوفها على أننا كان Limitiw Scope ديال أي تغيير نبغيو نديروه حيتاش كانخدموا غير فالClass ديالنا.
 
+
+## Const keyword in C++ ?
+
+In C++ the const keyword is used to qualify a type to its *Left*. The const keyword specifies that the declared object is a constant and cannot be modified.
+
+ <p align="center">
+    <img src="imgs/Const.png" width="700">
+</p>
 
 
 ## Can i declare member variables in cpp as virutal ?
@@ -529,6 +553,11 @@ So the issue in the 3D engine is that the machine is unable to perform floating 
 ALU كانبغوك غي سمح لينا ❤️
 </p>
 
+
+
+  <p align="center">
+    <img src="imgs/shapes.png" width="1200">
+  </p>
 
 
 # Errors and solutions
