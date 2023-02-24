@@ -2,17 +2,20 @@
 
 int main(void)
 {
-    Bureaucrat A;
+    Bureaucrat A("Unknown",140);
 
-    A.incGrade();
     std::cout << A;
     try
     {
-        A.incGrade();
+        for (size_t i = 0; i < 11; i++)
+        {
+            A.incGrade();
+        }
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cout << "Exception Catched : ";
+        std::cerr << e.what();
     }
-    
+    std::cout << A;
 }

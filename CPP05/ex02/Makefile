@@ -1,10 +1,14 @@
-NAME = ex00
+NAME = ex02
 
 CPP      = c++
 
 CPP_FLAGS = -Wall -Wextra -Werror -std=c++98
 
-FILES = Bureaucrat.cpp \
+FILES = AForm.cpp \
+		Bureaucrat.cpp \
+		PresidentialPardonForm.cpp \
+		RobotomyRequestForm.cpp \
+		ShrubberyCreationForm.cpp \
 		main.cpp \
 
 all     : $(NAME)
@@ -17,4 +21,4 @@ RM = rm -rf
 clean :
 	$(RM) $(NAME)
 
-re              : clean all
+re : clean all

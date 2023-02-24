@@ -6,6 +6,7 @@ Bureaucrat::Bureaucrat () : _name("Government"), _grade(150)
 }
 
 /*--------------------------------------------------------*/
+
 Bureaucrat::Bureaucrat (const Bureaucrat &a)
 {
 	// this->operator=(a);
@@ -13,7 +14,7 @@ Bureaucrat::Bureaucrat (const Bureaucrat &a)
 	std::cout << "Copy Constructor Bureaucrat\n";
 }
 
-/*--------------------------------------------------------*/
+// /*--------------------------------------------------------*/
 
 Bureaucrat::Bureaucrat (std::string name, int grade) : _name(name)
 {
@@ -25,7 +26,7 @@ Bureaucrat::Bureaucrat (std::string name, int grade) : _name(name)
 	std::cout << "Paramtrized Constructor Bureaucrat\n";
 }
 
-/*--------------------------------------------------------*/
+// /*--------------------------------------------------------*/
 
 Bureaucrat::~Bureaucrat ()
 {
@@ -33,7 +34,6 @@ Bureaucrat::~Bureaucrat ()
 }
 
 /*--------------------------------------------------------*/
-
 Bureaucrat & Bureaucrat::operator = (const Bureaucrat &a)
 {
 	this->_grade = a._grade;
@@ -42,13 +42,11 @@ Bureaucrat & Bureaucrat::operator = (const Bureaucrat &a)
 	return (*this);
 }
 
-
 std::ostream & operator << (std::ostream & OstreamObject, Bureaucrat const & Obj)
 {
     OstreamObject << Obj.getName() << " Bureaucrat Grade " <<  Obj.getGrade() << std::endl;
     return (OstreamObject);
 }
-
 
 void    Bureaucrat::decGrade()
 {
@@ -64,7 +62,6 @@ void    Bureaucrat::incGrade()
 	this->_grade++;
 }
 
-
 int Bureaucrat::getGrade() const
 {
 	return (this->_grade);
@@ -73,4 +70,18 @@ int Bureaucrat::getGrade() const
 std::string Bureaucrat::getName() const
 {
 	return (this->_name);
+}
+
+void    Bureaucrat::signAForm(AForm & AFormObj) const
+{
+	try
+	{
+		//	void    AForm::beSigned(Bureaucrat const & obj)
+		AFormObj.beSigned(*this);
+		std::cout << AFormObj.getName() << " Signed \n";
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << AFormObj.getName() << " couldn’t sign  \n";
+	} 
 }
