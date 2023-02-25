@@ -1,0 +1,25 @@
+NAME = ex03
+
+CPP      = c++
+
+CPP_FLAGS = -Wall -Wextra -Werror -std=c++98
+
+FILES = AForm.cpp \
+		Bureaucrat.cpp \
+		PresidentialPardonForm.cpp \
+		RobotomyRequestForm.cpp \
+		ShrubberyCreationForm.cpp \
+		Intern.cpp \
+		main.cpp \
+
+all     : $(NAME)
+
+$(NAME) : $(FILES)
+	$(CPP) $(CPP_FLAGS) $(FILES) -o $(NAME)
+
+RM = rm -rf
+
+clean :
+	$(RM) $(NAME)
+
+re : clean all
