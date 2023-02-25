@@ -42,6 +42,9 @@ Thank you for taking the time to check it out!
     * [References](#references)
   * [Inheritance](#inheritance)
     * [Pure Virtual Function](#PureVirtualFunction)
+  * [Exceptions](#exceptions)
+    
+    
   
    
   * [Common Questions](#memory-allocation)  
@@ -382,6 +385,13 @@ In short, a memory fetch is the process of retrieving data from memory, it's the
  و بالنسبة لل Access كايكون بزرية عكس الHeap لي خاصك عن طريق داك الPointer عاد تعرف الValue لي واخدها داك الPointer و اخر حاجة هي انه الStack هوا راسو كايتكفل بالMemory Managment ديال داكشي لي Alloca ليك يعني Implicit ماشي بحال الHeap لي ضروري خاصك تDelety اولا تFreey داكشي لي خدمتي بيه يعني Explicit
  صافي واقبلا ...
   
+# Exceptions 
+
+الExceptions كايعطيونا واحد الطريقة باش نتعاملوا مع المشاكل و المواقف الغريبة بواحد الطريقة Structured و  Flexible مقارنة مع If Statement اولا Exit زيادة على كاتخلى الكود ساهل يتقرا و يتصلح 
+
+
+خود معايا متال ديال واحد اللعبة هاد اللعبة يقدوا يواجهوها مشاكل بحال مكايناش Memoy شي Assets مالقاتهمش باش يعطيك تلعب الLevel الجاي اولا مشكل عندك
+ 
  
 # Inheritance
  
