@@ -43,6 +43,7 @@ Thank you for taking the time to check it out!
   * [Inheritance](#inheritance)
     * [Pure Virtual Function](#PureVirtualFunction)
   * [Exceptions](#exceptions)
+  * [Keywords](#keywords)
     
     
   
@@ -565,9 +566,9 @@ ALU كانبغوك غي سمح لينا ❤️
 </p>
 
 
-  <p align="center">
-    <img src="imgs/shapes.png" width="100">
-  </p>
+<p align="center">
+           <img src="imgs/shapes.png" width="100">
+</p>
 
 # Shallow Copy Vs Deep Copy
 
@@ -578,13 +579,18 @@ ALU كانبغوك غي سمح لينا ❤️
 تخايلوا معايا عندنا 2 ديال الناس P1 و P2 فالسوق كاين عندنا واحد التيليفون Iphone فالP1 خدا داك التيليفون أما الP2 بغا نفس داك الIphone فمشى دار ال Copying  للP2, دابا عندنا P2 و P1 عندهم Iphone و لكن دابا عندنا مشكل  هوما راهم تيليفونات مبدلين لكن عندهم نفس الميموري انعطيكم متال تخايلوا معايا الP1 مشى دخل شي Application فنفس الشئ غادي يوقع عند الP2 و العكس عاوتاني ايلا P2 مشى و تلاقى شي حد و دخل نمرتوا عندوا فنفس الشئ غادي يوقع. 
 
 <p align="center">
-    <img src="imgs/deep_copy.png" width="100">
-  </p>
-  
-  
-    <p align="center">
-    <img src="imgs/shallow_copy.png" width="100">
-  </p>
+    <img src="imgs/shallow_copy.png" width="700">
+</p>
+
+
+* Deep Copy :
+
+<p align="center">
+    <img src="imgs/deep_copy.png" width="700">
+</p>
+
+
+
 
 
 
@@ -593,4 +599,12 @@ ALU كانبغوك غي سمح لينا ❤️
   <p align="center">
     <img src="imgs/Screen Shot 2023-02-06 at 3.29.52 PM.png" width="700">
   </p>
+
+
+
+# Keywords
+
+
+Volatile
+
 
