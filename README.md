@@ -567,7 +567,7 @@ ALU كانبغوك غي سمح لينا ❤️
 
 
 <p align="center">
-           <img src="imgs/shapes.png" width="100">
+           <img src="imgs/shapes.png" width="1200">
 </p>
 
 # Shallow Copy Vs Deep Copy
