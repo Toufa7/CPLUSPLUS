@@ -20,7 +20,7 @@ Dog::Dog(const Dog &a)
 
 Dog::~Dog()
 {
-	// delete DogBrain;
+	delete DogBrain;
 	std::cout << "Destructor Dog\n";
 }
 
