@@ -50,17 +50,18 @@ std::ostream & operator << (std::ostream & OstreamObject, Bureaucrat const & Obj
 
 void    Bureaucrat::decGrade()
 {
+	if (_grade == 150)
+		throw Bureaucrat::GradeTooLowException();
+	this->_grade++;
+}
+
+void    Bureaucrat::incGrade()
+{
 	if (_grade == 1)
 		throw Bureaucrat::GradeTooHighException();
 	this->_grade--;
 }
 
-void    Bureaucrat::incGrade()
-{
-	if (_grade == 150)
-		throw Bureaucrat::GradeTooLowException();
-	this->_grade++;
-}
 
 int Bureaucrat::getGrade() const
 {
@@ -76,12 +77,11 @@ void    Bureaucrat::signAForm(AForm & AFormObj) const
 {
 	try
 	{
-		//	void    AForm::beSigned(Bureaucrat const & obj)
 		AFormObj.beSigned(*this);
-		std::cout << AFormObj.getName() << " Signed \n";
+		std::cout << _name << " \033[1;32mSigned\033[0m "  << AFormObj.getName() << "\n"; 
 	}
-	catch(const std::exception& e)
+	catch (const std::exception& e)
 	{
-		std::cout << AFormObj.getName() << " couldn’t sign  \n";
+		std::cout << _name << " \033[1;31mcouldn’t sign\033[0m " << AFormObj.getName() << " because grade too low\n" ; 
 	} 
 }

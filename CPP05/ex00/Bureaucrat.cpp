@@ -52,16 +52,16 @@ std::ostream & operator << (std::ostream & OstreamObject, Bureaucrat const & Obj
 
 void    Bureaucrat::decGrade()
 {
-	if (_grade == 1)
-		throw Bureaucrat::GradeTooHighException();
-	this->_grade--;
+	if (_grade == 150)
+		throw Bureaucrat::GradeTooLowException();
+	this->_grade++;
 }
 
 void    Bureaucrat::incGrade()
 {
-	if (_grade == 150)
-		throw Bureaucrat::GradeTooLowException();
-	this->_grade++;
+	if (_grade == 1)
+		throw Bureaucrat::GradeTooHighException();
+	this->_grade--;
 }
 
 

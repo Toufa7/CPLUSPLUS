@@ -6,9 +6,9 @@
 
 int main()
 {
-    ShrubberyCreationForm A("TargetA");
-    RobotomyRequestForm B("TargetB");
-    PresidentialPardonForm C("TargetC");
+    ShrubberyCreationForm   A("TargetA");
+    RobotomyRequestForm     B("TargetB");
+    PresidentialPardonForm  C("TargetC");
 
     Bureaucrat D("Nacho", 150);
 
@@ -20,7 +20,8 @@ int main()
     }
     catch (const std::exception& e)
     {
-        std::cout << "Camera Wowo\n";
+        std::cout << "\033[1;31mException Catched\033[0m\n";
+        std::cerr << e.what();
     }
 
 }

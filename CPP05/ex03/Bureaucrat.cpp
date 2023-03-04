@@ -9,7 +9,8 @@ Bureaucrat::Bureaucrat () : _name("Government"), _grade(150)
 
 Bureaucrat::Bureaucrat (const Bureaucrat &a)
 {
-	this->operator=(a);
+	// this->operator=(a);
+	*this = a;
 	std::cout << "Copy Constructor Bureaucrat\n";
 }
 
@@ -61,7 +62,6 @@ void    Bureaucrat::incGrade()
 	this->_grade--;
 }
 
-
 int Bureaucrat::getGrade() const
 {
 	return (this->_grade);
@@ -72,15 +72,15 @@ std::string Bureaucrat::getName() const
 	return (this->_name);
 }
 
-void    Bureaucrat::signForm(Form & FormObj) const
+void    Bureaucrat::signAForm(AForm & BuAForm) const
 {
 	try
 	{
-		FormObj.beSigned(*this);
-		std::cout << _name << " \033[1;32mSigned\033[0m "  << FormObj.getName() << "\n"; 
+		BuAForm.beSigned(*this);
+		std::cout << _name << " \033[1;32mSigned\033[0m "  << BuAForm.getName() << "\n"; 
 	}
 	catch (const std::exception& e)
 	{
-		std::cout << _name << " \033[1;31mcouldn’t sign\033[0m " << FormObj.getName() << " because grade too low\n" ; 
+		std::cout << _name << " \033[1;31mcouldn’t sign\033[0m " << BuAForm.getName() << " because grade too low\n" ; 
 	} 
 }

@@ -1,5 +1,5 @@
-#ifndef FORM_H
-#define FORM_H
+#ifndef AForm_H
+#define AForm_H
 
 #define SIGNED      1       
 #define NOTSIGNED   0
@@ -8,7 +8,7 @@
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
     private:
 
@@ -19,25 +19,23 @@ class Form
 
     public:
 
-        Form ();
-        Form (const Form &a);
-        Form (std::string name, int grade);
-        ~Form ();
-        Form & operator = (const Form &a);
+        AForm ();
+        AForm (const AForm &a);
+        AForm (int signedGrade, int executeGrade);
+        virtual ~AForm ();
+        AForm & operator = (const AForm &a);
 
         std::string getName() const;
 
         bool getSign() const;
 
         int  getSignGrade() const;
-
-        int executeGrade() const;
-
+        int  getExecuteGrade() const;
 
         class GradeTooHighException : public std::exception
         {
             const char* what() const throw()
-            {
+            { 
                 return ("Grade Too High Exception\n");
             }
         };
@@ -51,9 +49,10 @@ class Form
         };
         
         void    beSigned(Bureaucrat const & obj);
+        virtual void    execute(Bureaucrat const & executor) const  = 0;
 };
 
-std::ostream & operator << (std::ostream & OstreamObject, Form const & Obj);
+std::ostream & operator << (std::ostream & OstreamObject, AForm const & Obj);
 
 
 #endif

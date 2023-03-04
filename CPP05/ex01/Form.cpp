@@ -1,11 +1,11 @@
 #include "Form.hpp"
 
-Form::Form () :  _name("Santi"), _signedGrade(50), _executeGrade(125), _signStatus(NOTSIGNED)
+Form::Form () :  _name("LocationForm"), _signedGrade(50), _executeGrade(125), _signStatus(NOTSIGNED)
 {
 	std::cout << "Default Constructor Form\n";
 }
 
-Form::Form (int grade) :  _name("Santi"), _signedGrade(grade), _executeGrade(125), _signStatus(NOTSIGNED)
+Form::Form (std::string name, int grade) :  _name(name), _signedGrade(grade), _executeGrade(125), _signStatus(NOTSIGNED)
 {
 	std::cout << "Parametrized Constructor Form\n";
 }
@@ -61,7 +61,7 @@ int Form::executeGrade() const
 
 void    Form::beSigned(Bureaucrat const & obj)
 {
-	if (obj.getGrade() < this->_signedGrade)
+	if (obj.getGrade() <= this->_signedGrade)
 	{
 		throw Form::GradeTooLowException();
 	}

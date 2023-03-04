@@ -31,7 +31,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
 	if (executor.getGrade() > this->getSignGrade() && executor.getGrade() > this->getExecuteGrade())
 	{
-		std::cout << this->_target << " Create a beautiful tree\n";
 		std::ofstream	output;
 		output.open((this->_target) + "_shrubbery");
 		output << "       _-_       \n";
