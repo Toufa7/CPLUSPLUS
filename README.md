@@ -394,6 +394,13 @@ In short, a memory fetch is the process of retrieving data from memory, it's the
 خود معايا متال ديال واحد اللعبة هاد اللعبة يقدوا يواجهوها مشاكل بحال مكايناش Memoy شي Assets مالقاتهمش باش يعطيك تلعب الLevel الجاي اولا مشكل عندك
  
  
+<p>
+    <img src="imgs/StackCall.png" width="800">
+</p>
+ 
+
+
+ 
 # Inheritance
  
  
