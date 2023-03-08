@@ -43,6 +43,7 @@ Thank you for taking the time to check it out!
   * [Inheritance](#inheritance)
     * [Pure Virtual Function](#PureVirtualFunction)
   * [Exceptions](#exceptions)
+  * [Casting](#casting)
   * [Keywords](#keywords)
     
     
@@ -604,12 +605,20 @@ ALU كانبغوك غي سمح لينا ❤️
 # Errors and solutions
 
   <p align="center">
-    <img src="imgs/Screen Shot 2023-02-06 at 3.29.52 PM.png" width="700">
+    <img src="imgs/casting.png" width="700">
   </p>
 
 
 
+# Casting
+
+  <p align="center">
+    <img src="imgs/Screen Shot 2023-02-06 at 3.29.52 PM.png" width="700">
+  </p>
+
+
 # Keywords
+
 
 
 Volatile
