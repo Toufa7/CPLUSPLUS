@@ -27,10 +27,11 @@ PresidentialPardonForm & PresidentialPardonForm::operator = (const PresidentialP
 	return (*this);
 }
 
+//  You have to check that the form is signed and that the grade of the bureaucrat attempting to execute the form is high enough
 
 void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
-	if (executor.getGrade() > this->getSignGrade() && executor.getGrade() > this->getExecuteGrade())
+	if (executor.getGrade() <= this->getSignGrade() && executor.getGrade() <= this->getExecuteGrade())
 	{
 		std::cout << this->_target << " has been pardoned by Zaphod Beeblebrox\n";
 	}

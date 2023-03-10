@@ -68,13 +68,3 @@ void    AForm::beSigned(Bureaucrat const & obj)
 	else
 		this->_signStatus = SIGNED;
 }
-
-void AForm::execute(Bureaucrat const &executor) const
-{
-	if (executor.getGrade() > this->_signedGrade  && executor.getGrade() > this->_executeGrade)
-	{
-		// Wow
-	}
-	else
-		throw::AForm::GradeTooHighException();
-}

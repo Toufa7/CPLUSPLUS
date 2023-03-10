@@ -35,6 +35,7 @@ AForm *Intern::makeForm(std::string formName, std::string target) const
 						
 	AForm *PtrForms;
     int FindOrNot = -1;
+    
     for (int i = 0; i < 3; i++)
     {
         if (Forms[i] == 0)

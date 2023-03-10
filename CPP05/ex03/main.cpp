@@ -13,15 +13,15 @@ int main()
     delete rrf;
 
 
-    // Intern someRandomIntern;
-    // AForm* rrf;
-    // try
-    // {
-    //     rrf = someRandomIntern.makeForm("Cobotomy Request", "Bender");
-    // }
-    // catch (std::exception &a)
-    // {
-    //     std::cerr << a.what();
-    // }
-
+    Intern someRandomInternObj;
+    AForm* rrfPtr;
+    try
+    {
+        rrfPtr = someRandomInternObj.makeForm("Nightmare Names", "Bender");
+        delete rrfPtr;
+    }
+    catch (std::exception &a)
+    {
+        std::cerr << a.what();
+    }
 }

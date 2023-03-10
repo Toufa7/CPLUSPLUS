@@ -3,23 +3,18 @@
 int main(void)
 {
     Form        A;
-    Bureaucrat  valid("The Governor", 51);
+    Bureaucrat  valid("The Governor", 50);
 
     std::cout << A;
     std::cout << valid;
 
-    
-    valid.signForm(A);
-    A.beSigned(valid);
-    
+    valid.signForm(A);    
 
-    Form        B("NewForm",60);
-    Bureaucrat  invalid("The Nacho", 61);
+    Form        B("NewForm",1);
+    Bureaucrat  invalid("The Nacho", 2);
 
     std::cout << B;
     std::cout << invalid;
-
-    B.beSigned(invalid);
-    invalid.signForm(B);
-    B.beSigned(invalid);
+    
+    invalid.signForm(B);    
 }

@@ -29,7 +29,7 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator = (const ShrubberyCreati
 
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
-	if (executor.getGrade() > this->getSignGrade() && executor.getGrade() > this->getExecuteGrade())
+	if (executor.getGrade() <= this->getSignGrade() && executor.getGrade() <= this->getExecuteGrade())
 	{
 		std::ofstream	output;
 		output.open((this->_target) + "_shrubbery");

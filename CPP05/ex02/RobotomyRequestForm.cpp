@@ -39,7 +39,7 @@ void	ChoseString()
 
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 {
-	if (executor.getGrade() > this->getSignGrade()  && executor.getGrade() > this->getExecuteGrade())
+	if (executor.getGrade() <= this->getSignGrade() && executor.getGrade() <= this->getExecuteGrade())
 	{
 		std::cout << "Makes some drilling noises\n";
 		std::cout << this->_target;

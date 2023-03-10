@@ -59,9 +59,11 @@ int Form::executeGrade() const
 	return (this->_executeGrade);
 }
 
+// if the bureaucrat’s grade is high enough (higher or egal to the required one)
+
 void    Form::beSigned(Bureaucrat const & obj)
 {
-	if (obj.getGrade() <= this->_signedGrade)
+	if (obj.getGrade() > this->_signedGrade)
 	{
 		throw Form::GradeTooLowException();
 	}
