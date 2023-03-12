@@ -623,4 +623,7 @@ ALU كانبغوك غي سمح لينا ❤️
 
 Volatile
 
+# Ressources
 
+
+https://www.youtube.com/watch?v=NIDEjY5ywqU
