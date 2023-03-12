@@ -627,3 +627,8 @@ Volatile
 
 
 https://www.youtube.com/watch?v=NIDEjY5ywqU
+
+## Casting
+
+https://www.bogotobogo.com/cplusplus/upcasting_downcasting.php
+https://blog.andreiavram.ro/understanding-cpp-reinterpret-cast/
