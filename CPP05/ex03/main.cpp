@@ -5,11 +5,11 @@
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 
-int main()
+void    function()
 {
-    Intern someRandomIntern;
+        Intern someRandomIntern;
     AForm* rrf;
-    rrf = someRandomIntern.makeForm("Robotomy Request", "Bender");
+    rrf = someRandomIntern.makeForm("Presidential Pardon", "Bender");
     delete rrf;
 
 
@@ -17,7 +17,28 @@ int main()
     AForm* rrfPtr;
     try
     {
-        rrfPtr = someRandomInternObj.makeForm("Nightmare Names", "Bender");
+        rrfPtr = someRandomInternObj.makeForm("Presidential Pardon", "Bender");
+        delete rrfPtr;
+    }
+    catch (std::exception &a)
+    {
+        std::cerr << a.what();
+    }
+}
+
+int main()
+{
+    Intern someRandomIntern;
+    AForm* rrf;
+    rrf = someRandomIntern.makeForm("Presidential Pardon", "Bender");
+    delete rrf;
+
+
+    Intern someRandomInternObj;
+    AForm* rrfPtr;
+    try
+    {
+        rrfPtr = someRandomInternObj.makeForm("Presidential Pardon", "Bender");
         delete rrfPtr;
     }
     catch (std::exception &a)

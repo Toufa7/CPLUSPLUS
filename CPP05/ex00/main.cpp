@@ -7,9 +7,10 @@ int main(void)
     std::cout << A;
     try
     {
-        for (size_t i = 0; i < 15; i++)
+        for (size_t i = 0; i < 140; i++)
         {
-            A.decGrade();
+            A.incGrade();
+            std::cout << A;
         }
     }
     catch(const std::exception& e)

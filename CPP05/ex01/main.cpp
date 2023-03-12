@@ -3,7 +3,7 @@
 int main(void)
 {
     Form        A;
-    Bureaucrat  valid("The Governor", 50);
+    Bureaucrat  valid("The Governor", 1);
 
     std::cout << A;
     std::cout << valid;

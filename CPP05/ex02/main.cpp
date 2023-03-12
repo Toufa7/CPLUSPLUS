@@ -7,7 +7,7 @@
 int main()
 {
     // Sign 145, Exec 137
-    ShrubberyCreationForm   A("TargetA");
+    ShrubberyCreationForm   A("Omar");
 
     // Sign 72, Exec 45
     RobotomyRequestForm     B("TargetB");
@@ -15,7 +15,7 @@ int main()
     // Sign 25, Exec 5
     PresidentialPardonForm  C("TargetC");
 
-    Bureaucrat D("Nacho", 5);
+    Bureaucrat D("Nacho", 137);
 
     try
     {

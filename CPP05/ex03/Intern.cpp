@@ -32,6 +32,7 @@ AForm *Intern::makeForm(std::string formName, std::string target) const
 	int Forms[3] = {formName.compare("Presidential Pardon"),
 					formName.compare("Robotomy Request"),
 					formName.compare("Shrubbery Creation")};
+
 						
 	AForm *PtrForms;
     int FindOrNot = -1;
@@ -44,16 +45,17 @@ AForm *Intern::makeForm(std::string formName, std::string target) const
             break;
         }
     }
+
     switch (FindOrNot)
     {
         case 0:
            	PtrForms = new PresidentialPardonForm(target);
             break;
         case 1:
-           	PtrForms = new PresidentialPardonForm(target);
+           	PtrForms = new RobotomyRequestForm(target);
             break;
         case 2:
-           	PtrForms = new PresidentialPardonForm(target);
+           	PtrForms = new ShrubberyCreationForm(target);
             break;
         default:
 			throw Intern::FormNotFound();
