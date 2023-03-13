@@ -5,7 +5,6 @@ CPP      = c++
 CPP_FLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILES = main.cpp \
-		whatever.cpp \
 
 all     : $(NAME)
 

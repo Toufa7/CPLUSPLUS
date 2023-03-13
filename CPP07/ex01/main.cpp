@@ -1,12 +1,5 @@
 #include "iter.hpp"
 
-template <typename T>
-
-size_t  GetSize(T )
-{
-    return (sizeof(ArrStrrings)/sizeof(ArrStrrings[0]));
-}
-
 int main()
 {
 

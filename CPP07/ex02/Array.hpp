@@ -14,10 +14,9 @@ class Array
     public:
         Array ()
         {
-            this->arr = new T;
             this->size = 0;
+            this->arr = new T[this->size];
         }
-
         Array (unsigned int n)
         {
             this->size = n;
@@ -26,68 +25,46 @@ class Array
         
         Array (const Array &a)
         {
-            T *arr = new T[a.size];
-            for (size_t i = 0; i < a.size; i++)
-            {
-                arr[i] = a.arr[i];
-            }
-            this->size = a.size;
+            this->arr = new T[0];
+            this->operator=(a);
         }
 
         ~Array ()
         {
-            delete T;
+            delete [] this->arr;
         }
 
-        Array & operator = (const Array &a)
+            Array & operator = (const Array &a)
         {
-
-            T *tmp = new T[a.size];
+            delete [] this->arr;
+            this->arr = new T[a.size];
             for (size_t i = 0; i < a.size; i++)
             {
-                tmp[i] = a.arr[i];
+                this->arr[i] = a.arr[i];
             }
-            delete [] this->arr;
-            this->arr = tmp;
             this->size = a.size;
             return (*this);
         }
 
-        T   & operator [] (const int size)
+        T   & operator [] (unsigned int index) 
         {
-            try
-            {
-                if (size > this->size)
-                    throw std::out_of_range("Index is out of bounds");
-            }
-            catch(const std::exception& e)
-            {
-                std::cerr << e.what() << '\n';
-            }
+            if (index >= this->size || index < 0)
+                throw std::out_of_range("Index is out of bounds");
+            return (arr[index]);
         }
-    
-        const T   & operator [] (const int size) const 
+        
+        const T   & operator [] (unsigned int index) const
         {
-            try
-            {
-                if (size > this->size)
-                    throw std::out_of_range("Index is out of bounds");
-            }
-            catch(const std::exception& e)
-            {
-                std::cerr << e.what() << '\n';
-            }
+            if (index >= this->size || index < 0)
+                throw std::out_of_range("Index is out of bounds");
+            return (arr[index]);
         }
 
-        int size() const
+        int GetSize() const
         {
             return (this->size);
         }
 };
-
-
-
-// this->arr = new T(0);
 
 #endif
 

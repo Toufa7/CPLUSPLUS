@@ -1,11 +1,10 @@
-NAME = ex00
+NAME = ex02
 
 CPP      = c++
 
 CPP_FLAGS = -Wall -Wextra -Werror -std=c++98
 
 FILES = main.cpp \
-		Array.cpp \
 
 all     : $(NAME)
 
