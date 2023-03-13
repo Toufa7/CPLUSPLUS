@@ -43,6 +43,7 @@ Thank you for taking the time to check it out!
   * [Inheritance](#inheritance)
     * [Pure Virtual Function](#PureVirtualFunction)
   * [Exceptions](#exceptions)
+  * [Templates](#templates)
   * [Casting](#casting)
   * [Keywords](#keywords)
     
@@ -615,6 +616,26 @@ ALU كانبغوك غي سمح لينا ❤️
   <p align="center">
     <img src="imgs/Screen Shot 2023-02-06 at 3.29.52 PM.png" width="700">
   </p>
+
+
+# Templates
+
+
+
+Typesname كاتعطي بحال واحد الHint للCompiler 
+
+
+ الCompiler كايعامل Templates بحال شي بلان Bleuprints,
+
+
+واحد الاضافة واعرة للي كاتخلينا نصايبو Generic Code كيفاش البلان هاد اللخر هو واحد الكود لي كايخدم مع اي Data Type بلا ماتكون مOverridy ديك الFunction بزاف ديال المرات 
+
+ هادشي لي كايخلي الكود Flexible و كايتستعمل بزاف ديال المرات, هاد Templates تقد تقول بحال ايلا كايصايبوا لي واحد Formula اولا Bleuprint لي كايخد 2 اولا اكتر من نفس الType m,
+
+فاش الCompiler كايلقا Templates هوا مكايمشيش يصايب شي كود على حساب ديك ال Data Types بغيت نقصد انه بحال ايلا غادي يصايب بزاف ديال الFunctions من تم يشوف شكون لي خدمتي و يعطيها ليك , لا هوا تقد تقول كايمشي يبدل داك الTemplate بديك Data Type لي عندك على حساب واش عندك Function,Class, Data Member ...
+
+مرة غادي تلقا الناس كايخدموا ب Class اولا  Typename مهم راه بجوج عندهم نفس المعنى زعما نفس الخدمة كاين شي وحدين كايفضلوا ال Typename كايقولك كاتجي فالContext
+
 
 
 # Keywords
