@@ -210,6 +210,7 @@ Once a namespace is defined, its elements can be accessed using the scope resolu
 To represent the decimal number **172.625** in floating point representation, we will use the [IEEE 754](https://learn.microsoft.com/en-us/cpp/build/ieee-floating-point-representation?view=msvc-170) format. This format includes 3 main components:
 
 
+
 <p>
 <img src="imgs/fpr.png" width="1000">
 </p>
@@ -311,15 +312,15 @@ So the compiler needs to handle that operator based on whether it has been overl
   
   ## Syntax :
   
-  <p>
+<p>
   <img src="imgs/Syntax_overloading.png" width="1000"/>
-  </p>
+</p>
  
   ## Example
   
-   <p align="center">
-    <img = src="imgs/overloading.png" width="1000"/>
-   </p>
+<p align="center">
+  <img = src="imgs/overloading.png" width="1000"/>
+</p>
 
 
 
@@ -362,7 +363,6 @@ When a function uses a reference, it can directly access the variable without an
 
 A pointer, however, must use the indirection operator (*) to access the value of the variable, which requires an additional memory fetch.
 
-
 A memory fetch refers to the process of retrieving data from memory.
 
 When a program requests data from memory, the CPU sends a memory request to the memory management unit (MMU), which then retrieves the requested data from the physical memory and sends it back to the CPU. This process is called a memory fetch.
@@ -371,9 +371,9 @@ For example, when a program wants to access the value of a variable, it sends a 
 
 In short, a memory fetch is the process of retrieving data from memory, it's the act of fetching a value from the memory by providing the address of the variable.
 
-  <p>
-    <img src="imgs/memory.png" width="1000">
-  </p>
+<p>
+  <img src="imgs/memory.png" width="1000">
+</p>
 
 فاش كانديكلاريو شي variable الOS كايAllocy لينا Memory للداك الVariable باستعمال Virtual Memory باش نقدوا نخدموا البروغرام , من بعد كايشد MMU داك الMemory و كايدير اش كانسميوا Mapping Or Paging لPhysical Memory Address ف(RAM أولا Hard Disk) هاد  Physical Address هي الActual Location تاع Memory , ادن فاش تبغي تمشي للداك الVariable الCPU كايدير واحد الRequest من Virtual Address تاع الVariable كايجي سي MMU كايترجم ديك الVirtual Address للPhysical Address ()RAM الRAM كايخد ديك الValue لي مخبع تما و كايردها للCPU .
 
@@ -397,7 +397,7 @@ In short, a memory fetch is the process of retrieving data from memory, it's the
  
  
 <p>
-    <img src="imgs/StackCall.png" width="800">
+  <img src="imgs/StackCall.png" width="800">
 </p>
  
 
@@ -406,9 +406,9 @@ In short, a memory fetch is the process of retrieving data from memory, it's the
 # Inheritance
  
  
- <p>
-    <img src="imgs/Base.png" width="800">
-  </p>
+<p>
+  <img src="imgs/Base.png" width="800">
+</p>
  
  ## Function Overriding :
   
@@ -459,8 +459,8 @@ In order to avoid this, we declare the whoami() function of the Base class as vi
  
  A pure virtual function is a function that is declared with the "= 0" syntax at the end of its declaration, like this:
  
- <p>
-    <img src="imgs/pure.png" width="800">
+<p>
+  <img src="imgs/pure.png" width="800">
 </p>
 
  
@@ -524,16 +524,16 @@ Virtual functions are used to provide polymorphic behavior in object-oriented pr
 As we’ve seen, the IO library uses >> and << for input and output :
 
 
-  <p align="center">
-    <img src="imgs/Screen Shot 2023-02-04 at 4.23.38 PM.png" width="700">
-  </p>
+<p align="center">
+  <img src="imgs/Screen Shot 2023-02-04 at 4.23.38 PM.png" width="700">
+</p>
 
 
 ## Overloading the Output Operator <<
 
-  <p align="center">
-    <img src="imgs/overloading >>.png" width="700">
-  </p>
+<p align="center">
+  <img src="imgs/overloading >>.png" width="700">
+</p>
 
 
 ## Overloading the Output Operator >>
@@ -561,22 +561,22 @@ Since i already done CUB3D i'll demonstrate this using the Cub3d Engine
 So the issue in the 3D engine is that the machine is unable to perform floating point operations quickly enough, which is crucial for the engine's functionality because it requires a lot of trigonometry. The solution is to use a technique called "fixed-point arithmetic" which is a way to perform arithmetic operations in a more efficient manner, by representing decimal values as fixed-point numbers and using integer operations to manipulate them. This helps the ALU (Arithmetic Logic Unit) perform the required calculations more quickly.
 
 
-دابا ايلا خدينا Cub3d كمتال كنا حتاجينا بزاف دبال precision اقل متال فاش كانبغيوا نحسبوا نقطة ديال الالتقاء ديال Ray [y][x] فخدمنا الCos & Sin و خديناهم كDouble حيتاش محتاجين الدقة فهادشي التابيعات ديالوا هو انه CPU و بالضبط الALU لي مكلف بالعمليات الحسابية + - / * صعيب ماشي صعيب كاياخد ليه الوقت بزاف فشنوا درنا بحال ايلا خدعنا الALU و صيفطنا ليه دوك الأرقام لي بالفاصلة كأرقام بلاش المتال لتحت كايوضح هادشي :
+دابا ايلا خدينا Cub3d كمتال كنا حتاجينا بزاف ديال Precision اقل متال فاش كانبغيوا نحسبوا نقطة ديال الالتقاء ديال Ray [y][x] فخدمنا ال Cos & Sin و خديناهم كDouble حيتاش محتاجين الدقة فهادشي التابيعات ديالوا هو انه CPU و بالضبط الALU لي مكلف بالعمليات الحسابية + - / * صعيب ماشي صعيب كاياخد ليه الوقت بزاف باش يدير العمليات الحسابية, فشنوا درنا بحال ايلا خدعنا الALU و صيفطنا ليه دوك الأرقام لي بالفاصلة كأرقام Int بلا فاصلة
+المتال لتحت كايوضح هادشي :
 
 
-
-  <p align="center">
-    <img src="imgs/Screen Shot 2023-02-07 at 11.54.30 AM.png" width="700">
-  </p>
+<p align="center">
+  <img src="imgs/Screen Shot 2023-02-07 at 11.54.30 AM.png" width="700">
+</p>
 
 
 <p align="center"> 
-ALU كانبغوك غي سمح لينا ❤️
+  ALU كانبغوك غي سمح لينا ❤️
 </p>
 
 
 <p align="center">
-           <img src="imgs/shapes.png" width="1200">
+  <img src="imgs/shapes.png" width="1200">
 </p>
 
 # Shallow Copy Vs Deep Copy
@@ -600,22 +600,38 @@ ALU كانبغوك غي سمح لينا ❤️
 
 
 
-
-
-
 # Errors and solutions
 
-  <p align="center">
-    <img src="imgs/casting.png" width="700">
-  </p>
+<p align="center">
+  <img src="imgs/casting.png" width="700">
+</p>
 
 
 
 # Casting
 
-  <p align="center">
-    <img src="imgs/Screen Shot 2023-02-06 at 3.29.52 PM.png" width="700">
-  </p>
+
+
+الCasting هو العملية ديال تشد واحد الVariable من واحد الType و تبدلوا للواحد الType واحد أخر 
+
+الCasting مهم و نقدوا نحتاجوه بزاف فمتلا نقدوا نكونوا خدمنا بDouble و فواحد الوقت مابقيتش محتاج ديك الFractional Part فهاد الحالة هوا اصلا الCompiler كايدير الImplicit Cast لكن حنا نقدوا نديروا الExplicit Cast من Double لIn
+
+
+لي مهم هوا خاصك تستعمل الCasting و تكون حذر حيتاش يقد يدير ليك مشاكل و Unexpected Behavior.
+
+
+كيفاش نقد ندير الCasting هوا كاين أنواع لكن الSyntax بحال بحال :
+
+
+<p align="center"> 
+  type_cast <type>(data/variable/object)
+</p>
+
+
+
+<p align="center">
+  <img src="imgs/Screen Shot 2023-02-06 at 3.29.52 PM.png" width="700">
+</p>
 
 
 # Templates
@@ -644,4 +660,5 @@ https://www.youtube.com/watch?v=NIDEjY5ywqU
 ## Casting
 
 https://www.bogotobogo.com/cplusplus/upcasting_downcasting.php
+
 https://blog.andreiavram.ro/understanding-cpp-reinterpret-cast/
