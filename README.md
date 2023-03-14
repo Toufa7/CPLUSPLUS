@@ -614,7 +614,7 @@ So the issue in the 3D engine is that the machine is unable to perform floating 
 
 الCasting هو العملية ديال تشد واحد الVariable من واحد الType و تبدلوا للواحد الType واحد أخر 
 
-الCasting مهم و نقدوا نحتاجوه بزاف فمتلا نقدوا نكونوا خدمنا بDouble و فواحد الوقت مابقيتش محتاج ديك الFractional Part فهاد الحالة هوا اصلا الCompiler كايدير الImplicit Cast لكن حنا نقدوا نديروا الExplicit Cast من Double لIn
+الCasting مهم و نقدوا نحتاجوه بزاف فمتلا نقدوا نكونوا خدمنا بDouble و فواحد الوقت مابقيتش محتاج ديك الFractional Part فهاد الحالة هوا اصلا الCompiler كايدير الImplicit Cast لكن حنا نقدوا نديروا الExplicit Cast من Double لInt
 
 
 لي مهم هوا خاصك تستعمل الCasting و تكون حذر حيتاش يقد يدير ليك مشاكل و Unexpected Behavior.
@@ -626,6 +626,21 @@ So the issue in the 3D engine is that the machine is unable to perform floating 
 <p align="center"> 
   type_cast <type>(data/variable/object)
 </p>
+
+
+فالC++ كاينين 4 ديال الCasting Operators كل واحد و الاستعمال ديالوا :
+
+
+## Static Cast
+
+
+## Const Cast
+
+
+## Reinterpret Cast
+
+
+## Dynamic Cast
 
 
 
