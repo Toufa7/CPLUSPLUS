@@ -31,12 +31,13 @@ int main(int ac, char *av[])
 	std::string		replace;
 	std::string		filename;
 
-	filename = av[1];
-	needle = av[2];
-	replace = av[3];
+
 
 	if (ac == 4)
 	{
+		filename = av[1];
+		needle = av[2];
+		replace = av[3];
 		int idx;
 		in.open(filename);
 		if (in.is_open())
